@@ -1,6 +1,6 @@
 IframeBattleFX Readme
 
-** En tant qu'utilisateur **
+## En tant qu'utilisateur ##
 
 * Une couleur qui se démarque
 * Un thème unique
@@ -12,6 +12,6 @@ IframeBattleFX Readme
 * Une possibilité de tir manuel
 * Une possibilité de mode Autonome
 
-** En tant qu’Administrateur **
+## En tant qu’Administrateur ##
 
 * Avoir accès
