@@ -15,8 +15,6 @@ IframeBattleFX Readme
 ## En tant qu’Administrateur ##
 
 - permettre l’affichage simplifié de tout les utilisateur
-    - (Pastille de couleur changeante en fonction de l’état  )
-    - 3 état (Vert > bon  / jaune > moyen  / rouge > mauvais)
-- Vie
-- bot (couleur)
+- Vie affichée par des pastille de couleur => 3 état (Vert > bon  / jaune > moyen  / rouge > mauvais)
+- bot simplifié (couleur maitre)
 - Nom user dans une boite sous le cadre actif
