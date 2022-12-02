@@ -1,0 +1,18 @@
+body,html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.life {
+  justify-content: center;
+  background-color: black;
+  height: 3%;
+  border-radius: 20px;
+}
+.bot1 {
+  rotate: 0deg;
+  width: 30vmin;
+  width: 30vmin;
+}
