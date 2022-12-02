@@ -7,9 +7,26 @@ body,html {
 }
 .life {
   justify-content: center;
-  background-color: black;
-  height: 3%;
+  background-color: rgba(0, 0, 0, 0.476);
+  height: 2%;
   border-radius: 20px;
+}
+.life_bar {
+  background-color: rgba(72, 255, 0, 0.476);
+
+
+}
+.ammo {
+
+}
+.ammo_bar {
+  background-color: rgba(72, 255, 0, 0.476);
+}
+.battery{
+
+}
+.battery_bar{
+  
 }
 .bot1 {
   rotate: 0deg;
