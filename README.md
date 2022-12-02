@@ -108,8 +108,8 @@ Go to the website http:// ...
 
 ## Versions
 
-**Latest stable version :** 0.1
-**Latest version :** 0.1
+**Latest stable version :** 0.2
+**Latest version :** 0.2
 
 ## Authors
 
