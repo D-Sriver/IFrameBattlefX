@@ -13,14 +13,18 @@ body,html {
 }
 
 .life_bar_bg {
-    height: 20px;
-
-    background-color: black;
-    border-radius: 20px;
-}
-.life_bar {
   display: flex;
+  height: 20px;
+  background-color: black;
+  border-radius: 20px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20;
+}
+.life_bar {
+
+     background-color: green;
+     height: 10px;
+     width: 190px;
+     border-radius: 20px;
 }
