@@ -14,7 +14,13 @@ body,html {
 
 .life_bar_bg {
     height: 20px;
-    width: 20px;
+
     background-color: black;
     border-radius: 20px;
+}
+.life_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20;
 }
