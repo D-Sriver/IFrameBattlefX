@@ -44,19 +44,30 @@ Ce qu'il est requis pour commencer avec votre projet...
 
 ## User Story
 
---Utilisateur-;
+Utilisateur
 
 - Être capable de se déplacer avec les boutons de gauche de l'interface.
+
 - Être capable de faire des rotations avec le bouton à droite de l'interface.
+
 - Être capable de voir le nom du robot .
+
 - Être capable de voir la vie, les munitions et la batterie du robot.
+
 - Être capable de lancer un mode automatique.
+
 - Être capable de voir la camera embarquée du Bot.
+
 - Être capable de tirer manuellement.
+
 - Être capable de lancer un petit son.
-  --Admin-;
+
+  --Admin--
+
 - Afficher les données de vie , d'energie et de baterrie.
+
 - Afficher une image simplifiée du bot.
+
 - Avoir l'acendant sur le controle du bot.
 
 ## Démarrage
