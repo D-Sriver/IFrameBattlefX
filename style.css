@@ -5,42 +5,69 @@ body,html {
   width: 100%;
   height: 100%;
 }
-
-.bot1{
-  position: relative;
-  width: 100px;
-  height: 100px;
+.bot {
+  width: 100vmin;
+  height: 100vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bot_img{
+width: 50%;
+height: 50%;
+justify-content: center;
+align-items: center;
 }
 
 .life_bar_bg {
+  margin-top: 2%;
   display: flex;
-  height: 10px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 20px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 8%;
+  border-radius: 20px;
 }
 .life_bar {
-     background-color: #1F5DCC;
-     height: 5px;
-     width: 90px;
-     border-radius: 20px;
+  background-color: #1F5DCC;
+  width: 95%;
+  height: 50%;
+  border-radius: 20px;
 }
 .ammo_bar_bg {
+  margin-top: 2%;
   display: flex;
-  margin-top: 2px;
-  height: 10px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 20px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 8%;
+  border-radius: 20px;
 }
 
 .ammo {
-  background-color: #ad7214;
-     height: 5px;
-     width: 90px;
-     border-radius: 20px;
+  background-color: #AD7214;
+  width: 95%;
+  height: 50%;
+  border-radius: 20px;
+}
+
+.energy_bar_bg {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 8%;
+  border-radius: 20px;
+}
+
+.energy {
+  background-color: #9C2601;
+  width: 95%;
+  height: 50%;
+  border-radius: 20px;
 }
