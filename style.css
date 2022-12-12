@@ -16,7 +16,8 @@ body,html {
   z-index: 0;
   background-image: url(./img/grass.png);
   background-size: cover;
-  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  order: 0;
 }
 .name_bot {
   display: none;
@@ -33,6 +34,16 @@ body,html {
   border-radius: 25px;
   width: 50%;
 }
+.buton_image_reponsive {
+  display: flex
+}
+.bloc_button_left {
+  display: none;
+}
+.bloc_button_right {
+  display: none;
+}
+
 .bloc_image_bot {
   display: none;
   background-image: url(./img/duck.png);
@@ -69,15 +80,23 @@ body,html {
 }
 .bloc_button {
   display: none;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   width: 80%;
   height: 10%;
+  padding: 10px;
 }
+
 .buton_shot,.button_auto,.button_sound,.button_taunt {
-  background-color: white;
+  background-color: rgb(185, 185, 185);
   width: 6vmax;
   height: 6vmax;
+  transition: 2.5;
+}
+
+.buton_shot:hover,.button_auto:hover,.button_sound:hover,.button_taunt:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .buton_shot {
@@ -254,13 +273,47 @@ transition: 0.8s;
   display: flex;
   margin-bottom: 3vmax;
 }
+.background_image_top{
+  order: 0;
+}
 .bloc_button {
   display: none;
+
 }
 .button_right_radial,.button_left_radial {
   width: 300px;
   height: 300px;
   margin-top: 20%;
   margin-bottom: 30%;
+}
+
+.bloc_button_left {
+  display: flex;
+  height: 100%;
+  width: 20%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.bloc_button_right{
+display: flex;
+height: 100%;
+width: 20%;
+align-items: center;
+justify-content: space-evenly;
+flex-direction: column;
+}
+
+.button_taunt,.button_sound,.buton_shot,.button_auto{
+  background-size: 50%;
+  width: 10vmax;
+  height: 10vmax;
+}
+
+.buton_image_reponsive {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 }
