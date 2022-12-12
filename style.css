@@ -5,6 +5,7 @@ body,html {
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: #1F5DCC;
 }
 .left_up {
   background-color: crimson;
@@ -18,24 +19,21 @@ body,html {
   flex-direction: column;
   justify-content:space-evenly;
   align-items: center;
-  background-color: aqua;
 }
 .bot_img{
 width: 50%;
 height: 50%;
 transition: 0.8s;
-background-color: pink;
 }
-.life_bar_bg {
+.life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
   width: 80%;
-  height: 8%;
-  border-radius: 20px;
+  height: 10%;
   transition: 0.3s;
 }
+
 .life_bar {
   display: flex; /*none en petit*/
   align-items: center;
@@ -43,30 +41,9 @@ background-color: pink;
   background-color: #1F5DCC;
   width: 95%;
   height: 50%;
+  border: solid 5px;
   border-radius: 20px;
-  transition: 0.3s;
 }
-
-.life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5 {
-  background-color: rgba(255, 255, 255, 0.999);
-  width: 20%;
-  height: 100%;
-  margin: 2%;
-  transition: 0.3s;
-}
-
-.ammo_bar_bg {
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  width: 80%;
-  height: 8%;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
 .ammo_bar {
   display: flex;
   align-items: center;
@@ -74,30 +51,8 @@ background-color: pink;
   background-color: #AD7214;
   width: 95%;
   height: 50%;
+  border: solid 5px;
   border-radius: 20px;
-  transition: 0.3s;
-}
-
-.ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5
-{
-  display: flex; /*none en petit*/
-  background-color: rgba(255, 255, 255, 0.999);
-  width: 20%;
-  height: 100%;
-  margin: 2%;
-  transition: 0.3s;
-}
-
-.energy_bar_bg {
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  width: 80%;
-  height: 8%;
-  border-radius: 20px;
-  transition: 0.3s;
 }
 
 .energy_bar {
@@ -107,33 +62,109 @@ background-color: pink;
   background-color: #9C2601;
   width: 95%;
   height: 50%;
+  border: solid 5px;
   border-radius: 20px;
-  transition: 0.3s;
 }
-
-.energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5 {
-  display: flex; /*none en petit*/
+.ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5,
+.energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5,
+.life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5
+{
+  display: none; /*none en petit*/
   background-color: rgba(255, 255, 255, 0.999);
-  width: 50%;
+  width: 20%;
   height: 100%;
   margin: 2%;
   transition: 0.3s;
 }
 
-@media screen and (max-height: 300px) {
-  .life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5,
-  .ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5,
+
+
+@media screen and (max-height: 400px) {
+  body,html {
+    background-color:rgba(255, 255, 255, 0);
+  }
+  .life_bar,.ammo_bar,.energy_bar {;
+    border: none;
+    width: 95%;
+    height: 70%;
+    transition: 0.3s;
+}
+  .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
+    background-color: red;
+    background: none;
+    position: relative;
+    bottom: 30%;
+    left: 30%;
+    justify-content: center;
+    align-items: flex-end;
+    width: 15%;
+    height: 30%;
+  }
+  .life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5 {
+    background-color: rgba(255, 0, 0, 0);
+  }
+  .ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5 {
+    background-color: rgba(255, 0, 0, 0);
+  }
   .energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5 {
-    background-color:  rgba(255, 255, 255, 0);
+    background-color: rgba(255, 0, 0, 0);
+  }
+  .ennergy_bar_1{
+    background-color: rgba(255, 0, 0, 0);
+  }
+  .bot_img{
+    position: relative;
+    top: 25%;
   }
 }
 
-@media screen and (max-height: 150px) {
-  .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
-    background: none;
-    justify-content: center;
-    align-items: flex-end;
-    width: 30px;
-    height: 30px;
+@media screen and (min-height: 640px) {
+  .bot_img{
+    display:none;
   }
+  body {
+    justify-content: flex-end;
+  }
+  .bot{
+    justify-content: flex-end;
+    height: 180px;
+  }
+  .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
+    height: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5,.ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5,.energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5 {
+    display: flex;
+    height: 70%;
+    margin: 1%;
+    transition: 0.3s;
+  }
+  .life_bar,.ammo_bar,.energy_bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    width: 95%;
+    height: 100%;
+    transition: 0.3s;
+}
+.bloc_button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: red;
+  width: 80%;
+  height: 10%;
+}
+.buton_shot,.button_auto,.button_sound,.button_taunt {
+  background-color: green;
+  width: 6vmax;
+  height: 6vmax;
+}
 }
