@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&display=swap');
+
 body,html {
   display: flex;
   flex-direction: column;
@@ -9,17 +11,19 @@ body,html {
 }
 
 .name_bot {
-  display: none;
+  display: flex;
+  position: relative;
+  top: 10px;
   justify-content: center;
+  align-items: center;
+  padding: 0;
   background-color: #616161;
-  border: solid white 4px ;
-  text-align: center;
+  border: solid white 3px ;
+  font-family: 'Kufam', sans-serif;
   color: white;
   font-size: 200%;
   border-radius: 25px;
   width: 50%;
-  height: 50px;
-  margin-bottom: 10px;
 }
 .bloc_image_bot {
   display: none;
@@ -29,8 +33,8 @@ body,html {
   background-repeat: no-repeat;
   border: solid 7px;
   border-radius: 10%;
-  width: 40vmax ;
-  height: 40vmax;
+  width: 90% ;
+  height: 50%;
 }
 .button_radial_bloc {
   display: none;
@@ -52,7 +56,6 @@ body,html {
   display: none;
   justify-content: space-evenly;
   align-items: center;
-  background-color: red;
   width: 80%;
   height: 10%;
 }
@@ -66,21 +69,29 @@ body,html {
   background-image: url(./img/SVG/shoot.svg);
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
+  border: solid 4px;
 }
 .button_auto{
   background-image: url(./img/SVG/automatic.svg);
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
+  border: solid 4px;
 }
 .button_sound{
   background-image: url(./img/SVG/sound.svg);
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
+  border: solid 4px;
 }
 .button_taunt{
   background-image: url(./img/SVG/taunt.svg);
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
+  border: solid 4px;
 }
 .bot {
   width: 100vmin;
@@ -144,8 +155,6 @@ transition: 0.8s;
     transition: 0.3s;
 }
   .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
-    background-color: red;
-    background: none;
     position: relative;
     bottom: 30%;
     left: 30%;
@@ -201,5 +210,62 @@ transition: 0.8s;
 }
 .bloc_image_bot {
   display:flex;
+}
+}
+
+@media screen and (min-height: 1024px)  {
+  .bot_img{
+    display:none;
+  }
+  body {
+    justify-content: flex-end;
+  }
+  .bot{
+    justify-content: flex-end;
+    height: 180px;
+  }
+  .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
+    height: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5,.ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5,.energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5 {
+    display: flex;
+    height: 60%;
+    margin: 1%;
+    transition: 0.3s;
+  }
+  .life_bar,.ammo_bar,.energy_bar {
+    display: flex;
+    align-items: center;
+    border-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    height: 100%;
+}
+.bloc_button {
+  display: flex;
+}
+.button_radial_bloc {
+  display: flex;
+}
+.bloc_image_bot {
+  display:flex;
+  width: 30vmax;
+  height: 30vmax;
+}
+.name_bot{
+  display: none;
+}
+
+.button_right_radial,.button_left_radial {
+  background: radial-gradient( #87590F, #87590F 22%, rgba(238, 238, 238, 0) 75%, #333 75%);
+  border-radius: 100%;
+  border: solid #87590f81 3px;
+  width: 30vmax;
+  height: 30vmax;
 }
 }
