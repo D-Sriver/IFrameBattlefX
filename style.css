@@ -7,12 +7,31 @@ body,html {
   height: 100%;
   background-color: #1F5DCC;
 }
-.left_up {
-  background-color: crimson;
-  width: 20px;
-  height: 20px;
-}
 
+.name_bot {
+  display: none;
+  justify-content: center;
+  background-color: #616161;
+  border: solid white 4px ;
+  text-align: center;
+  color: white;
+  font-size: 200%;
+  border-radius: 25px;
+  width: 50%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.bloc_image_bot {
+  display: none;
+  background-image: url(./img/duck.png);
+  background-size: 82%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid 7px;
+  border-radius: 10%;
+  width: 40vmax ;
+  height: 40vmax;
+}
 .button_radial_bloc {
   display: none;
   justify-content: space-evenly;
@@ -24,8 +43,7 @@ body,html {
 .button_right_radial,.button_left_radial {
   background: radial-gradient( #87590F, #87590F 22%, rgba(238, 238, 238, 0) 75%, #333 75%);
   border-radius: 100%;
-  border: solid 3px;
-  border-color: #87590f81;
+  border: solid #87590f81 3px;
   width: 20vmax;
   height: 20vmax;
 }
@@ -39,9 +57,30 @@ body,html {
   height: 10%;
 }
 .buton_shot,.button_auto,.button_sound,.button_taunt {
-  background-color: green;
+  background-color: white;
   width: 6vmax;
   height: 6vmax;
+}
+
+.buton_shot {
+  background-image: url(./img/SVG/shoot.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.button_auto{
+  background-image: url(./img/SVG/automatic.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.button_sound{
+  background-image: url(./img/SVG/sound.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.button_taunt{
+  background-image: url(./img/SVG/taunt.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .bot {
   width: 100vmin;
@@ -159,5 +198,8 @@ transition: 0.8s;
 }
 .button_radial_bloc {
   display: flex;
+}
+.bloc_image_bot {
+  display:flex;
 }
 }
