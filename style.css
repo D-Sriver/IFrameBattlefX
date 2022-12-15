@@ -62,9 +62,10 @@ html {
   display: none;
   background-color: rgba(0, 0, 0, 0.265);
   border: solid;
-  border-radius: 20px;
-  width: 30vmax;
-  height: 20vmax;
+  border-radius: 35px;
+  width: 26vmax;
+  height: 18vmax;
+  margin-bottom: 5%;
 }
 .bloc_button {
   display: none;
@@ -83,9 +84,17 @@ html {
 .button_auto,
 .button_sound,
 .button_taunt {
-  background-color: white;
+  background-color: rgb(150, 150, 150);
   width: 6vmax;
   height: 6vmax;
+  transition: 0.5s;
+}
+
+.button_shot:hover,
+.button_auto:hover,
+.button_sound:hover,
+.button_taunt:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .button_shot {
@@ -93,28 +102,28 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  border: solid 4px;
+  border: solid 3px;
 }
 .button_auto {
   background-image: url(./img/SVG/automatic.svg);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  border: solid 4px;
+  border: solid 3px;
 }
 .button_sound {
   background-image: url(./img/SVG/sound.svg);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  border: solid 4px;
+  border: solid 3px;
 }
 .button_taunt {
   background-image: url(./img/SVG/taunt.svg);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  border: solid 4px;
+  border: solid 3px;
 }
 .bot {
   width: 100vmin;
@@ -222,7 +231,6 @@ html {
     display: none;
   }
   body {
-    justify-content: flex-end;
   }
   .bot {
     justify-content: flex-end;
@@ -307,7 +315,7 @@ html {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 25%;
+    height: 23%;
   }
   .bloc_button_left {
     width: 100%;
@@ -321,8 +329,8 @@ html {
   .button_auto,
   .button_sound,
   .button_taunt {
-    width: 10vmax;
-    height: 10vmax;
+    width: 8vmax;
+    height: 8vmax;
     background-size: 80%;
   }
   .button_sound {
@@ -330,5 +338,15 @@ html {
   }
   .button_shot {
     background-size: 60%;
+  }
+
+  .bot {
+    background-color: rebeccapurple;
+    width: 90%;
+    height: 5%;
+    flex-direction: row;
+  }
+  .camera {
+    display: flex;
   }
 }
