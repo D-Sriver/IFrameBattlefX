@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
-
+* {
+  transition: 0.3s;
+}
 body,
 html {
   display: flex;
@@ -41,7 +43,6 @@ html {
   display: none;
   justify-content: space-evenly;
   align-items: center;
-
   width: 100%;
   height: 25%;
 }
@@ -55,8 +56,8 @@ html {
   );
   border-radius: 100%;
   border: solid #87590f81 3px;
-  width: 20vmax;
-  height: 20vmax;
+  width: 18vmax;
+  height: 18vmax;
 }
 .camera {
   display: none;
@@ -72,6 +73,7 @@ html {
   justify-content: space-evenly;
   align-items: center;
   width: 90%;
+  padding: 5%;
 }
 
 .bloc_button_left,
@@ -85,9 +87,8 @@ html {
 .button_sound,
 .button_taunt {
   background-color: rgb(150, 150, 150);
-  width: 6vmax;
-  height: 6vmax;
-  transition: 0.5s;
+  width: 10vmax;
+  height: 10vmax;
 }
 
 .button_shot:hover,
@@ -101,28 +102,28 @@ html {
   background-image: url(./img/SVG/shoot.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 40px;
   border: solid 3px;
 }
 .button_auto {
   background-image: url(./img/SVG/automatic.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 40px;
   border: solid 3px;
 }
 .button_sound {
   background-image: url(./img/SVG/sound.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 40px;
   border: solid 3px;
 }
 .button_taunt {
   background-image: url(./img/SVG/taunt.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 40px;
   border: solid 3px;
 }
 .bot {
@@ -136,7 +137,6 @@ html {
 .bot_img {
   width: 50%;
   height: 50%;
-  transition: 0.8s;
 }
 .life_bar_bg,
 .ammo_bar_bg,
@@ -146,7 +146,6 @@ html {
   align-items: center;
   width: 80%;
   height: 10%;
-  transition: 0.3s;
 }
 
 .life_bar,
@@ -189,7 +188,6 @@ html {
   width: 20%;
   height: 100%;
   margin: 2%;
-  transition: 0.3s;
 }
 @media screen and (max-height: 400px) {
   body,
@@ -207,7 +205,6 @@ html {
     border: none;
     width: 95%;
     height: 70%;
-    transition: 0.3s;
   }
   .life_bar_bg,
   .ammo_bar_bg,
@@ -237,6 +234,15 @@ html {
     height: 180px;
     margin-bottom: 10px;
   }
+
+  .button_shot,
+  .button_auto,
+  .button_sound,
+  .button_taunt {
+    background-color: rgb(150, 150, 150);
+    width: 8vmax;
+    height: 8vmax;
+  }
   .life_bar_bg,
   .ammo_bar_bg,
   .energy_bar_bg {
@@ -264,7 +270,6 @@ html {
     display: flex;
     height: 60%;
     margin: 1%;
-    transition: 0.3s;
   }
   .life_bar,
   .ammo_bar,
@@ -279,6 +284,7 @@ html {
   }
   .bloc_button {
     display: flex;
+    padding: 2%;
   }
   .button_radial_bloc {
     display: flex;
@@ -349,4 +355,7 @@ html {
   .camera {
     display: flex;
   }
+}
+
+@media screen and (min-width: 1280px) {
 }
