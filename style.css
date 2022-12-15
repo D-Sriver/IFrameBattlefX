@@ -181,6 +181,11 @@ html {
   html {
     background-color: rgba(255, 255, 255, 0);
   }
+
+  .name_bot {
+    display: none;
+  }
+
   .life_bar,
   .ammo_bar,
   .energy_bar {
@@ -270,35 +275,26 @@ html {
 }
 
 @media screen and (min-height: 1024px) {
-  .bot {
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 6%;
-    width: 95%;
-    padding: 3%;
-  }
-
-  .bloc_image_bot {
-    display: flex;
-    width: 30vmax;
-    height: 30vmax;
-    padding: 5%;
+  body,
+  html {
+    background-color: rgb(32, 194, 110);
+    justify-content: flex-start;
   }
   .name_bot {
     display: none;
   }
-  .camera {
-    display: flex;
-    margin-bottom: 3vmax;
+  .bloc_image_bot {
+    margin-top: 5%;
+    width: 50%;
+    height: 35%;
   }
-  .bloc_button {
-    display: none;
+
+  .button_radial_bloc {
+    padding-top: 7%;
   }
-  .button_right_radial,
-  .button_left_radial {
-    width: 300px;
-    height: 300px;
-    margin-top: 20%;
-    margin-bottom: 30%;
+  .button_left_radial,
+  .button_right_radial {
+    height: 30vmax;
+    width: 30vmax;
   }
 }
