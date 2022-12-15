@@ -1,33 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Kufam&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
 
-body,html {
+body,
+html {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  margin: 0;
-  background-color: #1F5DCC;
+  background-color: #1f5dcc;
 }
-.background_image_top{
-  width: 100%;
-  height: 10%;
-  z-index: 0;
-  background-image: url(./img/grass.png);
-  background-size: cover;
-  background-repeat: repeat-x;
-}
+
 .name_bot {
-  display: none;
+  display: flex;
   position: relative;
   top: 10px;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding-top: 2%;
   background-color: #616161;
-  border: solid white 3px ;
-  font-family: 'Kufam', sans-serif;
+  border: solid white 3px;
+  font-family: "Kufam", sans-serif;
   color: white;
   font-size: 200%;
   border-radius: 25px;
@@ -41,7 +34,7 @@ body,html {
   background-repeat: no-repeat;
   border: solid 7px;
   border-radius: 10%;
-  width: 90% ;
+  width: 90%;
   height: 50%;
 }
 .button_radial_bloc {
@@ -52,8 +45,14 @@ body,html {
   width: 100%;
   height: 25%;
 }
-.button_right_radial,.button_left_radial {
-  background: radial-gradient( #87590F, #87590F 22%, rgba(238, 238, 238, 0) 75%, #333 75%);
+.button_right_radial,
+.button_left_radial {
+  background: radial-gradient(
+    #87590f,
+    #87590f 22%,
+    rgba(238, 238, 238, 0) 75%,
+    #333 75%
+  );
   border-radius: 100%;
   border: solid #87590f81 3px;
   width: 20vmax;
@@ -74,7 +73,10 @@ body,html {
   width: 80%;
   height: 10%;
 }
-.buton_shot,.button_auto,.button_sound,.button_taunt {
+.buton_shot,
+.button_auto,
+.button_sound,
+.button_taunt {
   background-color: white;
   width: 6vmax;
   height: 6vmax;
@@ -87,21 +89,21 @@ body,html {
   border-radius: 20px;
   border: solid 4px;
 }
-.button_auto{
+.button_auto {
   background-image: url(./img/SVG/automatic.svg);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
   border: solid 4px;
 }
-.button_sound{
+.button_sound {
   background-image: url(./img/SVG/sound.svg);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
   border: solid 4px;
 }
-.button_taunt{
+.button_taunt {
   background-image: url(./img/SVG/taunt.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -113,15 +115,17 @@ body,html {
   height: 100vmin;
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 }
-.bot_img{
-width: 50%;
-height: 50%;
-transition: 0.8s;
+.bot_img {
+  width: 50%;
+  height: 50%;
+  transition: 0.8s;
 }
-.life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
+.life_bar_bg,
+.ammo_bar_bg,
+.energy_bar_bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +134,9 @@ transition: 0.8s;
   transition: 0.3s;
 }
 
-.life_bar,.ammo_bar,.energy_bar {
+.life_bar,
+.ammo_bar,
+.energy_bar {
   display: flex; /*none en petit*/
   align-items: center;
   justify-content: flex-start;
@@ -140,18 +146,29 @@ transition: 0.8s;
   border-radius: 20px;
 }
 .life_bar {
-  background-color: #1F5DCC;
+  background-color: #1f5dcc;
 }
 .ammo_bar {
-  background-color: #AD7214;
+  background-color: #ad7214;
 }
 .energy_bar {
-  background-color: #9C2601;
+  background-color: #9c2601;
 }
-.ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5,
-.energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5,
-.life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5
-{
+.ammo_bar_cube1,
+.ammo_bar_cube2,
+.ammo_bar_cube3,
+.ammo_bar_cube4,
+.ammo_bar_cube5,
+.energy_bar_cube1,
+.energy_bar_cube2,
+.energy_bar_cube3,
+.energy_bar_cube4,
+.energy_bar_cube5,
+.life_bar_cube1,
+.life_bar_cube2,
+.life_bar_cube3,
+.life_bar_cube4,
+.life_bar_cube5 {
   display: none;
   background-color: rgba(255, 255, 255, 0.999);
   width: 20%;
@@ -160,16 +177,21 @@ transition: 0.8s;
   transition: 0.3s;
 }
 @media screen and (max-height: 400px) {
-  body,html {
-    background-color:rgba(255, 255, 255, 0);
+  body,
+  html {
+    background-color: rgba(255, 255, 255, 0);
   }
-  .life_bar,.ammo_bar,.energy_bar {
+  .life_bar,
+  .ammo_bar,
+  .energy_bar {
     border: none;
     width: 95%;
     height: 70%;
     transition: 0.3s;
-}
-  .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
+  }
+  .life_bar_bg,
+  .ammo_bar_bg,
+  .energy_bar_bg {
     position: relative;
     bottom: 30%;
     left: 30%;
@@ -178,41 +200,56 @@ transition: 0.8s;
     width: 15%;
     height: 30%;
   }
-  .bot_img{
+  .bot_img {
     position: relative;
     top: 25%;
   }
 }
 
 @media screen and (min-height: 640px) {
-  .bot_img{
-    display:none;
+  .bot_img {
+    display: none;
   }
   body {
     justify-content: flex-end;
   }
-  .name_bot{
-    display: flex;
-  }
-  .bot{
+  .bot {
     justify-content: flex-end;
     height: 180px;
     margin-bottom: 10px;
   }
-  .life_bar_bg,.ammo_bar_bg,.energy_bar_bg {
+  .life_bar_bg,
+  .ammo_bar_bg,
+  .energy_bar_bg {
     height: 100%;
     margin-top: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .life_bar_cube1,.life_bar_cube2,.life_bar_cube3,.life_bar_cube4,.life_bar_cube5,.ammo_bar_cube1,.ammo_bar_cube2,.ammo_bar_cube3,.ammo_bar_cube4,.ammo_bar_cube5,.energy_bar_cube1,.energy_bar_cube2,.energy_bar_cube3,.energy_bar_cube4,.energy_bar_cube5 {
+  .life_bar_cube1,
+  .life_bar_cube2,
+  .life_bar_cube3,
+  .life_bar_cube4,
+  .life_bar_cube5,
+  .ammo_bar_cube1,
+  .ammo_bar_cube2,
+  .ammo_bar_cube3,
+  .ammo_bar_cube4,
+  .ammo_bar_cube5,
+  .energy_bar_cube1,
+  .energy_bar_cube2,
+  .energy_bar_cube3,
+  .energy_bar_cube4,
+  .energy_bar_cube5 {
     display: flex;
     height: 60%;
     margin: 1%;
     transition: 0.3s;
   }
-  .life_bar,.ammo_bar,.energy_bar {
+  .life_bar,
+  .ammo_bar,
+  .energy_bar {
     display: flex;
     align-items: center;
     border-color: white;
@@ -220,47 +257,48 @@ transition: 0.8s;
     padding-right: 20px;
     border-radius: 50px;
     height: 100%;
-}
-.bloc_button {
-  display: flex;
-}
-.button_radial_bloc {
-  display: flex;
-}
-.bloc_image_bot {
-  display:flex;
-}
-}
-
-@media screen and (min-height: 1024px)  {
-.bot{
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: 6%;
-  width: 95%;
-  padding: 3%;
+  }
+  .bloc_button {
+    display: flex;
+  }
+  .button_radial_bloc {
+    display: flex;
+  }
+  .bloc_image_bot {
+    display: flex;
+  }
 }
 
-.bloc_image_bot {
-  display:flex;
-  width: 30vmax;
-  height: 30vmax;
-  padding: 5%;
-}
-.name_bot{
-  display: none;
-}
-.camera {
-  display: flex;
-  margin-bottom: 3vmax;
-}
-.bloc_button {
-  display: none;
-}
-.button_right_radial,.button_left_radial {
-  width: 300px;
-  height: 300px;
-  margin-top: 20%;
-  margin-bottom: 30%;
-}
+@media screen and (min-height: 1024px) {
+  .bot {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 6%;
+    width: 95%;
+    padding: 3%;
+  }
+
+  .bloc_image_bot {
+    display: flex;
+    width: 30vmax;
+    height: 30vmax;
+    padding: 5%;
+  }
+  .name_bot {
+    display: none;
+  }
+  .camera {
+    display: flex;
+    margin-bottom: 3vmax;
+  }
+  .bloc_button {
+    display: none;
+  }
+  .button_right_radial,
+  .button_left_radial {
+    width: 300px;
+    height: 300px;
+    margin-top: 20%;
+    margin-bottom: 30%;
+  }
 }
