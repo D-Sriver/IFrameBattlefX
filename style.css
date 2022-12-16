@@ -1,194 +1,196 @@
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
 * {
-  transition: 1s;
+	transition: 1s;
 }
 body,
 html {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #1f5dcc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #1f5dcc;
 }
-
+.bot {
+	height: 100%;
+}
 .name_bot {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1%;
-  background-color: #616161;
-  border: solid white 3px;
-  font-family: "Kufam", sans-serif;
-  color: white;
-  font-size: 180%;
-  border-radius: 25px;
-  width: 50%;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1%;
+	background-color: #616161;
+	border: solid white 3px;
+	font-family: "Kufam", sans-serif;
+	color: white;
+	font-size: 180%;
+	border-radius: 25px;
+	width: 50%;
 }
 .bloc_image_bot {
-  display: none;
-  background-image: url(./img/duck.png);
-  background-size: 85%;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: solid 5px;
-  border-radius: 10%;
-  margin-top: 2%;
-  width: 80%;
-  height: 140%;
+	display: none;
+	background-image: url(./img/duck.png);
+	background-size: 85%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: solid 5px;
+	border-radius: 10%;
+	margin-top: 2%;
+	width: 80%;
+	height: 140%;
 }
 .button_radial_bloc {
-  display: none;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  padding-top: 3%;
+	display: none;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	padding-top: 3%;
+	padding-bottom: 5%;
 }
 .button_right_radial,
 .button_left_radial {
-  background: radial-gradient(#87590f, #87590f 10%, rgba(238, 238, 238, 0) 80%);
-  border-radius: 100%;
-  border: solid #87590f81 3px;
-  width: 17vmax;
-  height: 17vmax;
+	background: radial-gradient(#87590f, #87590f 10%, rgba(238, 238, 238, 0) 80%);
+	border-radius: 100%;
+	border: solid #87590f81 3px;
+	width: 17vmax;
+	height: 17vmax;
 }
 
 .bloc_button {
-  display: none;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 90%;
-  height: 50%;
+	display: none;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 90%;
 }
 
 .bloc_button_left,
 .bloc_button_right {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
 }
 .button_shot,
 .button_auto,
 .button_sound,
 .button_taunt {
-  background-color: rgb(150, 150, 150);
-  width: 7vmax;
-  height: 7vmax;
+	background-color: rgb(150, 150, 150);
+	width: 7vmax;
+	height: 7vmax;
 }
 
 .button_shot:hover,
 .button_auto:hover,
 .button_sound:hover,
 .button_taunt:hover {
-  background-color: rgb(255, 255, 255);
-  animation: pulse 2s infinite;
+	background-color: rgb(255, 255, 255);
+	animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
 
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
-  }
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+	}
 
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
 }
 
 .button_shot {
-  background-image: url(./img/SVG/shoot.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  border: solid 3px;
+	background-image: url(./img/SVG/shoot.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	border: solid 3px;
 }
 .button_auto {
-  background-image: url(./img/SVG/automatic.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  border: solid 3px;
+	background-image: url(./img/SVG/automatic.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	border: solid 3px;
 }
 .button_sound {
-  background-image: url(./img/SVG/sound.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  border: solid 3px;
+	background-image: url(./img/SVG/sound.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	border: solid 3px;
 }
 .button_taunt {
-  background-image: url(./img/SVG/taunt.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  border: solid 3px;
+	background-image: url(./img/SVG/taunt.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	border: solid 3px;
 }
 .bot {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 .bot_img {
-  width: 50%;
-  height: 50%;
+	width: 50%;
+	height: 50%;
 }
 
 .bottom_bloc {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 }
 
 .camera {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.265);
-  border: solid;
-  border-radius: 35px;
-  margin-top: 2%;
-  width: 25vmax;
-  height: 16vmax;
-  margin-bottom: 3%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.265);
+	border: solid;
+	border-radius: 35px;
+	margin-top: 2%;
+	width: 25vmax;
+	height: 16vmax;
+	margin-bottom: 3%;
 }
 
 .life_bar_bg,
 .ammo_bar_bg,
 .energy_bar_bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 10%;
 }
 
 .life_bar,
 .ammo_bar,
 .energy_bar {
-  display: flex; /*none en petit*/
-  align-items: center;
-  justify-content: flex-start;
-  width: 95%;
-  height: 50%;
-  border: solid 5px;
-  border-radius: 20px;
+	display: flex; /*none en petit*/
+	align-items: center;
+	justify-content: flex-start;
+	width: 95%;
+	height: 50%;
+	border: solid 5px;
+	border-radius: 20px;
 }
 .life_bar {
-  background-color: #1f5dcc;
+	background-color: #1f5dcc;
 }
 .ammo_bar {
-  background-color: #ad7214;
+	background-color: #ad7214;
 }
 .energy_bar {
-  background-color: #9c2601;
+	background-color: #9c2601;
 }
 .ammo_bar_cube1,
 .ammo_bar_cube2,
@@ -205,185 +207,180 @@ html {
 .life_bar_cube3,
 .life_bar_cube4,
 .life_bar_cube5 {
-  display: none;
-  background-color: rgba(255, 255, 255, 0.999);
-  width: 20%;
-  height: 100%;
-  margin: 2%;
+	display: none;
+	background-color: rgba(255, 255, 255, 0.999);
+	width: 20%;
+	height: 100%;
+	margin: 2%;
 }
 @media screen and (max-height: 400px) {
-  body,
-  html {
-    background-color: rgba(255, 255, 255, 0);
-  }
-
-  .name_bot {
-    display: none;
-  }
-
-  .life_bar,
-  .ammo_bar,
-  .energy_bar {
-    border: none;
-    width: 95%;
-    height: 70%;
-  }
-  .life_bar_bg,
-  .ammo_bar_bg,
-  .energy_bar_bg {
-    position: relative;
-    bottom: 30%;
-    left: 30%;
-    justify-content: center;
-    align-items: flex-end;
-    width: 15%;
-    height: 30%;
-  }
-  .bot_img {
-    position: relative;
-    top: 25%;
-  }
+	body,
+	html {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	.bot {
+		width: 100%;
+		height: 100%;
+		flex-direction: row;
+	}
+	.name_bot {
+		display: none;
+	}
 }
 
 @media screen and (min-height: 640px) {
-  .bot_img {
-    display: none;
-  }
-  body {
-  }
-  .bot {
-    justify-content: flex-end;
-    height: 190px;
-    margin-bottom: 1%;
-  }
-  .life_bar_bg,
-  .ammo_bar_bg,
-  .energy_bar_bg {
-    height: 100%;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .life_bar_cube1,
-  .life_bar_cube2,
-  .life_bar_cube3,
-  .life_bar_cube4,
-  .life_bar_cube5,
-  .ammo_bar_cube1,
-  .ammo_bar_cube2,
-  .ammo_bar_cube3,
-  .ammo_bar_cube4,
-  .ammo_bar_cube5,
-  .energy_bar_cube1,
-  .energy_bar_cube2,
-  .energy_bar_cube3,
-  .energy_bar_cube4,
-  .energy_bar_cube5 {
-    display: flex;
-    height: 60%;
-    margin: 1%;
-  }
-  .life_bar,
-  .ammo_bar,
-  .energy_bar {
-    display: flex;
-    align-items: center;
-    border-color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 50px;
-    height: 100%;
-  }
-  .bloc_button {
-    display: flex;
-  }
-  .button_radial_bloc {
-    display: flex;
-  }
-  .bloc_image_bot {
-    display: flex;
-  }
+	.bot_img {
+		display: none;
+	}
+	.bot {
+		justify-content: flex-end;
+		height: 190px;
+		margin-bottom: 1%;
+	}
+	.life_bar_bg,
+	.ammo_bar_bg,
+	.energy_bar_bg {
+		height: 100%;
+		margin-top: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.life_bar_cube1,
+	.life_bar_cube2,
+	.life_bar_cube3,
+	.life_bar_cube4,
+	.life_bar_cube5,
+	.ammo_bar_cube1,
+	.ammo_bar_cube2,
+	.ammo_bar_cube3,
+	.ammo_bar_cube4,
+	.ammo_bar_cube5,
+	.energy_bar_cube1,
+	.energy_bar_cube2,
+	.energy_bar_cube3,
+	.energy_bar_cube4,
+	.energy_bar_cube5 {
+		display: flex;
+		height: 60%;
+		margin: 1%;
+	}
+	.life_bar,
+	.ammo_bar,
+	.energy_bar {
+		display: flex;
+		align-items: center;
+		border-color: white;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 50px;
+		height: 100%;
+	}
+	.bloc_button {
+		display: flex;
+	}
+	.button_radial_bloc {
+		display: flex;
+	}
+	.bloc_image_bot {
+		display: flex;
+	}
 }
 
 @media screen and (min-height: 1024px) {
-  body,
-  html {
-    justify-content: flex-start;
-  }
-  .name_bot {
-    display: none;
-  }
-  .bottom_bloc {
-    flex-direction: column;
-  }
-  .bloc_image_bot {
-    width: 50%;
-    height: 120%;
-  }
-  .button_left_radial,
-  .button_right_radial {
-    height: 30vmax;
-    width: 30vmax;
-  }
-  .bloc_button {
-    position: absolute;
-    top: 5%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 22%;
-  }
-  .bloc_button_left {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .bloc_button_right {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .button_right_radial,
-  .button_left_radial {
-    border: solid #87590f81 8px;
-    width: 28vmax;
-    height: 28vmax;
-  }
-  .button_shot,
-  .button_auto,
-  .button_sound,
-  .button_taunt {
-    width: 9vmax;
-    height: 9vmax;
-    background-size: 80%;
-  }
-  .button_sound {
-    background-size: 30%;
-  }
-  .button_shot {
-    background-size: 50%;
-  }
-  .button_taunt {
-    background-size: 60%;
-  }
-  .button_auto {
-    background-size: 60%;
-  }
+	body,
+	html {
+		justify-content: flex-start;
+	}
+	.name_bot {
+		display: none;
+	}
+	.bottom_bloc {
+		flex-direction: column;
+	}
+	.bloc_image_bot {
+		width: 50%;
+		height: 120%;
+	}
+	.button_left_radial,
+	.button_right_radial {
+		height: 30vmax;
+		width: 30vmax;
+	}
+	.button_radial_bloc {
+		padding-bottom: 0%;
+	}
+	.bloc_button {
+		position: absolute;
+		top: 5%;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 22%;
+	}
+	.bloc_button_left {
+		width: 100%;
+		justify-content: space-between;
+	}
+	.bloc_button_right {
+		width: 100%;
+		justify-content: space-between;
+	}
+	.button_right_radial,
+	.button_left_radial {
+		border: solid #87590f81 8px;
+		width: 28vmax;
+		height: 28vmax;
+	}
+	.button_shot,
+	.button_auto,
+	.button_sound,
+	.button_taunt {
+		width: 9vmax;
+		height: 9vmax;
+		background-size: 80%;
+	}
+	.button_sound {
+		background-size: 30%;
+	}
+	.button_shot {
+		background-size: 50%;
+	}
+	.button_taunt {
+		background-size: 60%;
+	}
+	.button_auto {
+		background-size: 60%;
+	}
 
-  .bot {
-    background-color: rebeccapurple;
-    width: 90%;
-    height: 20%;
-    flex-direction: row;
-  }
-  .camera {
-    display: flex;
-    margin-top: 1%;
-  }
+	.bot {
+		background-color: rebeccapurple;
+		width: 90%;
+		height: 20%;
+		flex-direction: row;
+	}
+	.camera {
+		display: flex;
+		margin-top: 1%;
+	}
 }
 
 @media only screen and (min-width: 1224px) {
-  html,
-  body {
-    background-color: red;
-  }
+	html,
+	body {
+		background-color: red;
+	}
+	.button_radial_bloc {
+		justify-content: space-between;
+		width: 90%;
+	}
+	.bottom_bloc {
+		flex-direction: column;
+		width: 100%;
+	}
+	.bot {
+		background-color: rebeccapurple;
+		width: 90%;
+		flex-direction: column;
+	}
 }
