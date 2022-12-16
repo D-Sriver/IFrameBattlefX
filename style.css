@@ -6,7 +6,6 @@ body,
 html {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -23,29 +22,28 @@ html {
   border: solid white 3px;
   font-family: "Kufam", sans-serif;
   color: white;
-  font-size: 200%;
+  font-size: 180%;
   border-radius: 25px;
   width: 50%;
 }
 .bloc_image_bot {
   display: none;
   background-image: url(./img/duck.png);
-  background-size: 83%;
+  background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
   border: solid 5px;
   border-radius: 10%;
   margin-top: 2%;
   width: 80%;
-  height: 40%;
+  height: 140%;
 }
 .button_radial_bloc {
   display: none;
   justify-content: space-evenly;
   align-items: center;
-
   width: 100%;
-  height: 25%;
+  padding-top: 3%;
 }
 .button_right_radial,
 .button_left_radial {
@@ -55,21 +53,13 @@ html {
   width: 17vmax;
   height: 17vmax;
 }
-.camera {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.265);
-  border: solid;
-  border-radius: 35px;
-  width: 26vmax;
-  height: 18vmax;
-  margin-bottom: 5%;
-}
+
 .bloc_button {
   display: none;
   justify-content: space-evenly;
   align-items: center;
   width: 90%;
-  padding-bottom: 3%;
+  height: 50%;
 }
 
 .bloc_button_left,
@@ -151,6 +141,25 @@ html {
   width: 50%;
   height: 50%;
 }
+
+.bottom_bloc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.camera {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.265);
+  border: solid;
+  border-radius: 35px;
+  margin-top: 2%;
+  width: 25vmax;
+  height: 16vmax;
+  margin-bottom: 3%;
+}
+
 .life_bar_bg,
 .ammo_bar_bg,
 .energy_bar_bg {
@@ -305,14 +314,12 @@ html {
   .name_bot {
     display: none;
   }
-  .bloc_image_bot {
-    margin-top: 4%;
-    border-radius: 20px;
-    width: 50%;
-    height: 35%;
+  .bottom_bloc {
+    flex-direction: column;
   }
-  .button_radial_bloc {
-    padding-top: 7%;
+  .bloc_image_bot {
+    width: 50%;
+    height: 120%;
   }
   .button_left_radial,
   .button_right_radial {
@@ -335,6 +342,12 @@ html {
     width: 100%;
     justify-content: space-between;
   }
+  .button_right_radial,
+  .button_left_radial {
+    border: solid #87590f81 8px;
+    width: 28vmax;
+    height: 28vmax;
+  }
   .button_shot,
   .button_auto,
   .button_sound,
@@ -344,19 +357,33 @@ html {
     background-size: 80%;
   }
   .button_sound {
-    background-size: 50%;
+    background-size: 30%;
   }
   .button_shot {
+    background-size: 50%;
+  }
+  .button_taunt {
+    background-size: 60%;
+  }
+  .button_auto {
     background-size: 60%;
   }
 
   .bot {
     background-color: rebeccapurple;
     width: 90%;
-    height: 5%;
+    height: 20%;
     flex-direction: row;
   }
   .camera {
     display: flex;
+    margin-top: 1%;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  html,
+  body {
+    background-color: red;
   }
 }
