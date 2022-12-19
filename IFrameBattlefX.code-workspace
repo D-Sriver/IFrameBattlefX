@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "IFrameBattlefX @ 4c4f061",
+			"uri": "gitlens://7b22726566223a2234633466303631303038306431303935366434383338323561343462623239316464303433313939222c227265706f50617468223a22633a2f576f726b73706163652f494672616d65426174746c656658227d/c:/Workspace/IFrameBattlefX?{\"ref\":\"4c4f061\"}"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "IFrameBattlefX"
+	}
+}

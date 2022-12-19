@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Robotic battle Iframe</title>
-<link rel="stylesheet" href="style.css" />
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Robotic battle Iframe</title>
+   <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <div class="name_bot">BOT NAME</div>
 
-<script src="/paho-mqtt-min.js"></script>
-<script src="/iframebattlefx.js"></script>
-<script src="/script.js"></script>
-</head>
-<body>
-
-<div class="name_bot">BOT NAME</div>
 <div class="bloc_image_bot"></div>
-<div class="button_radial_bloc w100">
-<div class="button_left_radial"></div>
-<div class="button_right_radial"></div>
-</div>
-<div class="bloc_button">
-<div class="bloc_button_left">
-	<div class="btn bImgShot"></div>
-	<div class="btn bImgAuto"></div>
-</div>
-<div class="bloc_button_right">
-	<div class="btn bImgSound"></div>
-	<div class="btn bImgTaunt"></div>
-</div>
-</div>
-<section class="bottom_bloc">
-	<div class="camera"></div>
-	<div class="bot w100">
 
-	<img class="bot_img" src="./img/bot.png" alt="Bot">
+ <div class="button_radial_bloc">
+   <div class="button_left_radial"></div>
+   <div class="button_right_radial"></div>
+ </div>
 
-	<div class="barBg">
-	<div id="life" class="life_bar"></div>
-</div>
-	<div class="barBg">
-	<div id="ammo" class="ammo_bar"></div>
-</div>
-	<div class="barBg">
-	<div id="energy" class="energy_bar"></div>
-</div>
+ 
+ <div class="bloc_button">
+   <div class="bloc_button_left">
+     <div class="button_shot"></div>
+     <div class="button_auto"></div>
+   </div>
+   <div class="bloc_button_right">
+     <div class="button_sound"></div>
+     <div class="button_taunt"></div>
+   </div>
+ </div>
+ <section class="bottom_bloc">
+ <div class="camera"></div>
+ <div class="bot">
+   <img class="bot_img" src="./img/bot.png" alt="Bot">
+     
+   <div class="life_bar_bg">
+     <div class="life_bar">
+       <div class="life_bar_cube1"></div>
+       <div class="life_bar_cube2"></div>
+       <div class="life_bar_cube3"></div>
+       <div class="life_bar_cube4"></div>
+       <div class="life_bar_cube5"></div>
+     </div>
+   </div>
 
-</img>
+     <div class="ammo_bar_bg">
+       <div class="ammo_bar">
+         <div class="ammo_bar_cube1"></div>
+         <div class="ammo_bar_cube1"></div>
+         <div class="ammo_bar_cube1"></div>
+         <div class="ammo_bar_cube1"></div>
+         <div class="ammo_bar_cube1"></div>
+       </div>
+     </div>
+
+   <div class="energy_bar_bg">
+     <div class="energy_bar">
+       <div class="energy_bar_cube1"></div>
+       <div class="energy_bar_cube1"></div>
+       <div class="energy_bar_cube1"></div>
+       <div class="energy_bar_cube1"></div>
+       <div class="energy_bar_cube1"></div>
+     </div>
+   </div>
+   
+ </img>
 </div>
 </section>
-</body>
+ </body>
 </html>
