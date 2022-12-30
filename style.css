@@ -1,3 +1,9 @@
+:root{
+	--bgColor: #1F5DCC;
+	--buttonColor: #616161;
+	--buttonColorHover: #FFFFFF;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
 * {
 	transition: 1s;
@@ -9,7 +15,7 @@ html {
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	background-color: #1f5dcc;
+	background-color: var(--bgColor) ;
 }
 .bot {
 	height: 100%;
@@ -18,12 +24,11 @@ html {
 	display: flex;
 	position: relative;
 	justify-content: center;
-	align-items: center;
-	padding-top: 1%;
-	background-color: #616161;
-	border: solid white 3px;
+	padding: 1%;
+	background-color: var(--buttonColor) ;
+	border: solid var(--buttonColorHover) 3px;
 	font-family: "Kufam", sans-serif;
-	color: white;
+	color: var(--buttonColorHover);
 	font-size: 180%;
 	border-radius: 25px;
 	width: 50%;
@@ -74,16 +79,33 @@ html {
 .button_auto,
 .button_sound,
 .button_taunt {
-	background-color: rgb(150, 150, 150);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	border: solid 3px;
+	background-color:var(--buttonColor);
 	width: 7vmax;
 	height: 7vmax;
+}
+
+.button_shot {
+	background-image: url(./img/SVG/shoot.svg);
+}
+.button_auto {
+	background-image: url(./img/SVG/automatic.svg);
+}
+.button_sound {
+	background-image: url(./img/SVG/sound.svg);
+}
+.button_taunt {
+	background-image: url(./img/SVG/taunt.svg);
 }
 
 .button_shot:hover,
 .button_auto:hover,
 .button_sound:hover,
 .button_taunt:hover {
-	background-color: rgb(255, 255, 255);
+	background-color:var(--buttonColorHover);
 	animation: pulse 2s infinite;
 }
 
@@ -92,56 +114,27 @@ html {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
 	}
-
 	70% {
 		transform: scale(1);
 		box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
 	}
-
 	100% {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
 
-.button_shot {
-	background-image: url(./img/SVG/shoot.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 40px;
-	border: solid 3px;
-}
-.button_auto {
-	background-image: url(./img/SVG/automatic.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 40px;
-	border: solid 3px;
-}
-.button_sound {
-	background-image: url(./img/SVG/sound.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 40px;
-	border: solid 3px;
-}
-.button_taunt {
-	background-image: url(./img/SVG/taunt.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 40px;
-	border: solid 3px;
-}
 .bot {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 .bot_img {
-	width: 50%;
-	height: 50%;
+	justify-content: center;
+	align-items: center;
+	height: 50vmin;
 }
 
 .bottom_bloc {
@@ -165,7 +158,7 @@ html {
 .life_bar_bg,
 .ammo_bar_bg,
 .energy_bar_bg {
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	width: 80%;
@@ -175,7 +168,7 @@ html {
 .life_bar,
 .ammo_bar,
 .energy_bar {
-	display: flex; /*none en petit*/
+	display: none; /*none en petit*/
 	align-items: center;
 	justify-content: flex-start;
 	width: 95%;
@@ -192,38 +185,36 @@ html {
 .energy_bar {
 	background-color: #9c2601;
 }
-.ammo_bar_cube1,
-.ammo_bar_cube2,
-.ammo_bar_cube3,
-.ammo_bar_cube4,
-.ammo_bar_cube5,
-.energy_bar_cube1,
-.energy_bar_cube2,
-.energy_bar_cube3,
-.energy_bar_cube4,
-.energy_bar_cube5,
-.life_bar_cube1,
-.life_bar_cube2,
-.life_bar_cube3,
-.life_bar_cube4,
-.life_bar_cube5 {
-	display: none;
-	background-color: rgba(255, 255, 255, 0.999);
-	width: 20%;
-	height: 100%;
-	margin: 2%;
+.ammo_bar_cube,
+.energy_bar_cube,
+.life_bar_cube {
+	display: flex;
+	background: var(--buttonColorHover) repeat-x;
+	width: 100%;
+	border-radius: 20px;
+	height: 8vmin;
+
 }
 @media screen and (max-height: 400px) {
 	body,
 	html {
-		background-color: rgba(255, 255, 255, 0);
+		background-color: var(--buttonColorHover);
 	}
-	.bot {
+	.bottom_bloc {
+		display: flex;
 		width: 100%;
 		height: 100%;
-		flex-direction: row;
+		flex-direction: column;
+	}
+	.bot_img {
+		display: flex;
 	}
 	.name_bot {
+		display: none;
+	}
+	.life_bar,
+	.ammo_bar,
+	.energy_bar {
 		display: none;
 	}
 }
@@ -231,11 +222,6 @@ html {
 @media screen and (min-height: 640px) {
 	.bot_img {
 		display: none;
-	}
-	.bot {
-		justify-content: flex-end;
-		height: 190px;
-		margin-bottom: 1%;
 	}
 	.life_bar_bg,
 	.ammo_bar_bg,
@@ -245,25 +231,6 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-	.life_bar_cube1,
-	.life_bar_cube2,
-	.life_bar_cube3,
-	.life_bar_cube4,
-	.life_bar_cube5,
-	.ammo_bar_cube1,
-	.ammo_bar_cube2,
-	.ammo_bar_cube3,
-	.ammo_bar_cube4,
-	.ammo_bar_cube5,
-	.energy_bar_cube1,
-	.energy_bar_cube2,
-	.energy_bar_cube3,
-	.energy_bar_cube4,
-	.energy_bar_cube5 {
-		display: flex;
-		height: 60%;
-		margin: 1%;
 	}
 	.life_bar,
 	.ammo_bar,
@@ -287,11 +254,8 @@ html {
 	}
 }
 
-@media screen and (min-height: 1024px) {
-	body,
-	html {
-		justify-content: flex-start;
-	}
+@media screen and (min-height: 1024px){
+
 	.name_bot {
 		display: none;
 	}
@@ -299,16 +263,13 @@ html {
 		flex-direction: column;
 	}
 	.bloc_image_bot {
-		width: 50%;
+		background-image: url(./img/duck2.png);
+		width: 65%;
 		height: 120%;
-	}
-	.button_left_radial,
-	.button_right_radial {
-		height: 30vmax;
-		width: 30vmax;
+		border: 0 ;
 	}
 	.button_radial_bloc {
-		padding-bottom: 0%;
+		padding-bottom: 0;
 	}
 	.bloc_button {
 		position: absolute;
@@ -318,10 +279,7 @@ html {
 		align-items: center;
 		height: 22%;
 	}
-	.bloc_button_left {
-		width: 100%;
-		justify-content: space-between;
-	}
+	.bloc_button_left,	
 	.bloc_button_right {
 		width: 100%;
 		justify-content: space-between;
@@ -354,33 +312,22 @@ html {
 	}
 
 	.bot {
-		background-color: rebeccapurple;
 		width: 90%;
 		height: 20%;
 		flex-direction: row;
+		padding-bottom: 5%;
 	}
 	.camera {
 		display: flex;
-		margin-top: 1%;
+		margin-top: 3%;
+	}
+	.ammo_bar_cube,
+	.energy_bar_cube,
+	.life_bar_cube {
+		height: 5vmin;
 	}
 }
 
-@media only screen and (min-width: 1224px) {
-	html,
-	body {
-		background-color: red;
-	}
-	.button_radial_bloc {
-		justify-content: space-between;
-		width: 90%;
-	}
-	.bottom_bloc {
-		flex-direction: column;
-		width: 100%;
-	}
-	.bot {
-		background-color: rebeccapurple;
-		width: 90%;
-		flex-direction: column;
-	}
+@media screen and (min-width: 1024px){
+	/*wip*/
 }
