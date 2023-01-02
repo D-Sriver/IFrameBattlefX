@@ -61,7 +61,7 @@ html {
 	width: 17vmax;
 	height: 17vmax;
 }
-
+/* ensemble du bloc comprenant le bloc left et right */
 .bloc_button {
 	display: none;
 	justify-content: space-evenly;
@@ -108,7 +108,7 @@ html {
 	background-color:var(--buttonColorHover);
 	animation: pulse 2s infinite;
 }
-
+/* Frames d'annimation des bouton d'action */
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
@@ -123,20 +123,7 @@ html {
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
-
-.bot {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.bot_img {
-	justify-content: center;
-	align-items: center;
-	height: 50vmin;
-}
-
+/* Bloc contenant l'image principale du bot */
 .bottom_bloc {
 	display: flex;
 	align-items: center;
@@ -154,21 +141,23 @@ html {
 	height: 16vmax;
 	margin-bottom: 3%;
 }
-
-.life_bar_bg,
-.ammo_bar_bg,
-.energy_bar_bg {
-	display: none;
+.bot {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 80%;
-	height: 10%;
 }
-
+.bot_img {
+	justify-content: center;
+	align-items: center;
+	height: 50vmin;
+}
+/* Barre de vie/munitions/energie */
 .life_bar,
 .ammo_bar,
 .energy_bar {
-	display: none; /*none en petit*/
+	display: none;
 	align-items: center;
 	justify-content: flex-start;
 	width: 95%;
@@ -185,15 +174,23 @@ html {
 .energy_bar {
 	background-color: #9c2601;
 }
+.life_bar_bg,
+.ammo_bar_bg,
+.energy_bar_bg {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 10%;
+}
+.life_bar_cube, 
 .ammo_bar_cube,
-.energy_bar_cube,
-.life_bar_cube {
+.energy_bar_cube {
 	display: flex;
 	background: var(--buttonColorHover) repeat-x;
 	width: 100%;
 	border-radius: 20px;
 	height: 8vmin;
-
 }
 @media screen and (max-height: 400px) {
 	body,

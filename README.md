@@ -24,6 +24,8 @@ Ce qu'il est requis pour commencer avec votre projet...
 
   - Tir
 
+  - Taunt
+
 - Une interface de déplacement manuelle
 
 - Une possibilité de tir manuel
@@ -80,9 +82,9 @@ Vous rendre sur le site http:// ...
 
 ## Versions
 
-**Dernière version stable :** 0.2
+**Dernière version stable :** 0.3
 
-**Dernière version :** 0.2
+**Dernière version :** 0.3
 
 ## Auteurs
 
@@ -119,6 +121,8 @@ What is required to start with your project...
   - Victoire
 
   - Shooting
+  
+  - Taunt
 
 - A manual movement interface
 
@@ -140,7 +144,7 @@ What is required to start with your project...
 
 ## User Story
 
---User-;
+--User-
 
 - Ability to move with left interface buttons.
 - Ability to rotate with the button to the right of the interface.
@@ -150,7 +154,9 @@ What is required to start with your project...
 - Be able to see the bot’s onboard camera.
 - Ability to fire manually.
 - Being able to make a small sound.
-  --Admin-;
+
+--Admin-
+
 - View Life, Energy and Ship data.
 - Display a simplified bot image.
 - Having the ability to control the bot.
@@ -165,9 +171,9 @@ Go to http:// ...
 
 ## Versions
 
-**Latest stable release:** 0.2
+**Latest stable release:** 0.3
 
-**Latest version:** 0.2
+**Latest version:** 0.3
 
 ## Authors
 
