@@ -84,7 +84,7 @@ Vous rendre sur le site http:// ...
 
 **Dernière version stable :** 0.3
 
-**Dernière version :** 0.3
+**Dernière version :** 0.4
 
 ## Auteurs
 
@@ -173,7 +173,7 @@ Go to http:// ...
 
 **Latest stable release:** 0.3
 
-**Latest version:** 0.3
+**Latest version:** 0.4
 
 ## Authors
 
