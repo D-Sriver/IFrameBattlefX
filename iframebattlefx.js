@@ -28,7 +28,7 @@ console.log("Chargement iframebattlefx.js");
 /**
  * @typedef {Object} AgentEvent
  * @property {Agent} src The agent that triggers the event	
- * @property {string} name The name of the event
+ * @property {string} name The name of the event: "connected", "disconnected", "xChanged", "yChanged", "dirChanged", "dChanged", "lifeChanged", "ammoChanged", "updated", "stateChanged",
  * @property {any} before The value of the attribute that changed during the event
  * @property {any} after The value of the attribute that changed during the event
 */
@@ -36,7 +36,7 @@ console.log("Chargement iframebattlefx.js");
  * Main class to create and handle the behaviour 
  * of a virtual robot in an arena 
 */
-export class Agent {
+class Agent {
 	id;				
 	x; 				
 	y; 				
@@ -84,8 +84,8 @@ export class Agent {
 			id = window.prompt("Entrer le nom de votre agent (15 caractères max)", "");
 		if ( id === null || id === "" )
 			id = "Agent" + Math.random().toString(36).substr(2, 4);
-		if ( id.length > 15 )
-			id = id.substr(0,15);
+		if ( id.length > 30 )
+			id = id.substr(0,30);
 		
 		if ( username === null )
 			username = window.prompt("Entrer le username", "demo");
@@ -254,7 +254,7 @@ export class Agent {
      * @param {number} 	dir 		0: east, 1: north, 2:west, 3:south 
      * @returns {void} 
     */
-	lookAt(dir) {
+	lookTo(dir) {
 		if ( this.#readOnly === true )
 			return;
 		this.#agentRequest['dir'] = dir;
@@ -436,3 +436,4 @@ export class Agent {
 	}	
 
 }
+

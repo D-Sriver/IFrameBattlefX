@@ -2,6 +2,9 @@
 	--bgColor: #1F5DCC;
 	--buttonColor: #616161;
 	--buttonColorHover: #FFFFFF;
+	--life:100%;
+	--ammo:100%;
+	--energy:100%;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
@@ -37,7 +40,7 @@ html {
 .bloc_image_bot {
 	display: none;
 	background-image: url(./img/duck.png);
-	background-size: 85%;
+	background-size: 95%;
 	background-position: center;
 	background-repeat: no-repeat;
 	border: solid 5px;
@@ -76,10 +79,10 @@ html {
 	justify-content: space-around;
 	width: 50%;
 }
-.button_shot,
-.button_auto,
-.button_sound,
-.button_taunt {
+#button_shot,
+#button_auto,
+#button_sound,
+#button_taunt {
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 40px;
@@ -89,16 +92,16 @@ html {
 	height: 7vmax;
 }
 
-.button_shot {
+#button_shot {
 	background-image: url(./img/SVG/shoot.svg);
 }
-.button_auto {
+#button_auto {
 	background-image: url(./img/SVG/automatic.svg);
 }
-.button_sound {
+#button_sound {
 	background-image: url(./img/SVG/sound.svg);
 }
-.button_taunt {
+#button_taunt {
 	background-image: url(./img/SVG/taunt.svg);
 }
 
@@ -152,7 +155,7 @@ html {
 .bot_img {
 	justify-content: center;
 	align-items: center;
-	height: 50vmin;
+	height: 80%;
 }
 /* Barre de vie/munitions/energie */
 .life_bar,
@@ -184,12 +187,24 @@ html {
 	width: 80%;
 	height: 10%;
 }
-.life_bar_cube, 
-.ammo_bar_cube,
-.energy_bar_cube {
+#life_bar_cube{
 	display: flex;
 	background: var(--buttonColorHover) repeat-x;
-	width: 100%;
+	width: var(--life);
+	border-radius: 20px;
+	height: 8vmin;
+}
+#ammo_bar_cube{
+	display: flex;
+	background: var(--buttonColorHover) repeat-x;
+	width: var(--ammo);
+	border-radius: 20px;
+	height: 8vmin;
+}
+#energy_bar_cube {
+	display: flex;
+	background: var(--buttonColorHover) repeat-x;
+	width: var(--energy);
 	border-radius: 20px;
 	height: 8vmin;
 }
