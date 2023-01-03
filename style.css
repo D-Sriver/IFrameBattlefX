@@ -47,7 +47,7 @@ html {
 	border-radius: 10%;
 	margin-top: 2%;
 	width: 75vmin;
-	height: 140%;
+	height: 130%;
 }
 .button_radial_bloc {
 	display: none;
@@ -105,10 +105,10 @@ html {
 	background-image: url(./img/SVG/taunt.svg);
 }
 
-.button_shot:hover,
-.button_auto:hover,
-.button_sound:hover,
-.button_taunt:hover {
+#button_shot:hover,
+#button_auto:hover,
+#button_sound:hover,
+#button_taunt:hover {
 	background-color:var(--buttonColorHover);
 	animation: pulse 2s infinite;
 }
@@ -155,7 +155,7 @@ html {
 .bot_img {
 	justify-content: center;
 	align-items: center;
-	height: 80%;
+	height: 100%;
 }
 /* Barre de vie/munitions/energie */
 .life_bar,
@@ -211,29 +211,12 @@ html {
 @media screen and (max-height: 400px) {
 	body,
 	html {
-		background-color: var(--buttonColorHover);
+		background-color: none;
 	}
 	.bot {
 		display: flex;
 		flex-direction: row;
-	}
-	.life_bar_bg {
-		display: flex;
-		background-color: #1f5dcc;
-		border-radius: 25px;
-		width: 10vmin
-	}
-	.ammo_bar_bg {
-		display: flex;
-		background-color: #ad7214;
-		border-radius: 25px;
-		width: 10vmin
-	}
-	.energy_bar_bg {
-		display: flex;
-		background-color: #9c2601;
-		border-radius: 25px;
-		width: 10vmin
+		background-color: rgba(255, 0, 0, 0);
 	}
 	.name_bot {
 		display: none;
