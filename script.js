@@ -22,10 +22,22 @@ function onAgentDirChanged(event) {
 function onPageLoaded(event) {
   let url_string = window.location.href;
   let url = new URL(url_string);
-  let readonly = url.searchParams.get("readonly")
-  let verbosity = url.searchParams.get("verbosity")
-  console.log(readonly)
-  console.log(verbosity)
+  let readonly = url.searchParams.get("readonly");
+  let verbosity = url.searchParams.get("verbosity");
+//readonly défini automatiquement sur True 
+  if ((readonly = null)) readonly = true;
+  else readonly = readonly == "true";
+  //* expression d'operations ternaire
+  //*  readonly = (readonly==null) ?   true : (readonly === 'true');
+
+//permet de définir les informations (1 a 4 (debug))
+  if ((verbosity = null)) verbosity = 1;
+  else verbosity = parseInt(verbosity);
+  //* expression d'operations ternaire
+  //*  readonly = (verbosity==null) ?   1 :   parseInt(verbosity);
+
+  console.log(readonly);
+  console.log(verbosity);
 
   let agent = new Agent(
     "sebastien_duez",
