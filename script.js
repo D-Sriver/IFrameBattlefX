@@ -1,17 +1,32 @@
 var agent;
+maxLife = 100;
+maxAmmo = 10;
 
 //*lien vers la fonction Connected
 function onAgentConnected(event) {
   console.log(`Agent connected ${agent.id}`);
+  let firebutton = document.querySelector("#button_shot");
+  firebutton.addEventListener("mousedown", onFireButtonDown);
+  firebutton.addEventListener("mouseup", onFireButtonUp);
 }
 
+//*lien vers la fonction Agent Connected des deux état du bouton
+function onFireButtonDown(event) {
+  console.log("fire !");
+}
+function onFireButtonUp(event) {
+  console.log("Stop fire");
+}
+//*lien vers la fonction de vie
+function   lifeChanged (event) {
+  let life = document.querySelector("#life_bar_cube");
+  console.log(life);
+  life.style.width = "20%";
+}
 //*lien vers la fonction Updated
 function onAgentUpdated(event) {
   console.log(`Agent updated ${agent.id}`);
   agent.lookTo((agent.dir + 1) % 4);
-  let life = document.querySelector(".life_bar_bg");
-  console.log(life);
-  life.style.width = "1%";
 }
 
 //*lien vers la fonction DirChanged
@@ -20,17 +35,6 @@ function onAgentDirChanged(event) {
   let img = document.querySelector("img");
   console.log(img);
   img.style.transform = "rotate(" + agent.dir * 90 + "deg)";
-}
-function onFireButtonDown(event) {
-  console.log("fire !");
-}
-function onFireButtonUp(event) {
-  console.log("Stop fire");
-}
-function onOvaLoaded(event) {
-  let firebutton = document.querySelector("#button_shot");
-  firebutton.addEventListener("mousedown", onFireButtonDown);
-  firebutton.addEventListener("mouseup", onFireButtonUp);
 }
 
 //*fonction qui charge l'agent au démarrage de la page
@@ -44,19 +48,19 @@ function onPageLoaded(event) {
   //*readonly défini automatiquement sur True
   if (readonly == null) readonly = true;
   else readonly = readonly == "true";
-  //* expression d'operations ternaire
+  //! expression d'operations ternaire
   //!  readonly = (readonly==null) ?   true : (readonly === 'true');
 
   //*permet de définir les informations (1 a 4 (debug))
   if (verbosity == null) verbosity = 1;
   else verbosity = parseInt(verbosity);
-  //* expression d'operations ternaire
+  //! expression d'operations ternaire
   //!  readonly = (verbosity==null) ?   1 :   parseInt(verbosity);
 
   console.log(readonly);
   console.log(verbosity);
 
-  let agent = new Agent(
+  agent = new Agent(
     "sebastien_duez",
     "demo",
     "demo",
@@ -72,6 +76,7 @@ function onPageLoaded(event) {
   agent.addEventListener("connected", onAgentConnected);
   agent.addEventListener("updated", onAgentUpdated);
   agent.addEventListener("dirChanged", onAgentDirChanged);
+  agent.addEventListener("lifeChanged", onAgentlifeChanged)
 }
 //*charge le dom (defer)
 document.addEventListener("DOMContentLoaded", onPageLoaded);
