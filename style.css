@@ -1,337 +1,362 @@
-:root{
-	--bgColor: #1F5DCC;
-	--buttonColor: #616161;
-	--buttonColorHover: #FFFFFF;
-	--life:100%;
-	--ammo:100%;
-	--energy:100%;
+:root {
+  --bgColor: #1f5dcc;
+  --buttonColor: #616161;
+  --buttonColorHover: #ffffff;
+  --life: 100%;
+  --ammo: 100%;
+  --energy: 100%;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
 * {
-	transition: 0.5s;
+  transition: 0.5s;
 }
 body,
 html {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	background-color: var(--bgColor) ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bgColor);
 }
 .bot {
-	height: 100%;
+  height: 100%;
 }
 .name_bot {
-	display: flex;
-	position: relative;
-	justify-content: center;
-	padding: 1%;
-	background-color: var(--buttonColor) ;
-	border: solid var(--buttonColorHover) 3px;
-	font-family: "Kufam", sans-serif;
-	color: var(--buttonColorHover);
-	font-size: 180%;
-	border-radius: 25px;
-	width: 50%;
+  display: none;
+  position: relative;
+  justify-content: center;
+  padding: 1%;
+  background-color: var(--buttonColor);
+  border: solid var(--buttonColorHover) 3px;
+  font-family: "Kufam", sans-serif;
+  color: var(--buttonColorHover);
+  font-size: 180%;
+  border-radius: 25px;
+  width: 50%;
 }
 .bloc_image_bot {
-	display: none;
-	background-image: url(./img/duck.png);
-	background-size: 95%;
-	background-position: center;
-	background-repeat: no-repeat;
-	border: solid 5px;
-	border-radius: 10%;
-	margin-top: 2%;
-	width: 75vmin;
-	height: 130%;
+  display: none;
+  background-image: url(./img/duck.png);
+  background-size: 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid 5px;
+  border-radius: 10%;
+  margin-top: 2%;
+  width: 75vmin;
+  height: 130%;
 }
 .button_radial_bloc {
-	display: none;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
-	padding-top: 3%;
-	padding-bottom: 5%;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 5%;
 }
 .button_right_radial,
 .button_left_radial {
-	background: radial-gradient(#87590f, #87590f 10%, rgba(238, 238, 238, 0) 80%);
-	border-radius: 100%;
-	border: solid #87590f81 3px;
-	width: 17vmax;
-	height: 17vmax;
+  background: radial-gradient(#87590f, #87590f 10%, rgba(238, 238, 238, 0) 80%);
+  border-radius: 100%;
+  border: solid #87590f81 3px;
+  width: 17vmax;
+  height: 17vmax;
 }
 /* ensemble du bloc comprenant le bloc left et right */
 .bloc_button {
-	display: none;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 90%;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
 }
 
 .bloc_button_left,
 .bloc_button_right {
-	display: flex;
-	justify-content: space-around;
-	width: 50%;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 #button_shot,
 #button_auto,
 #button_sound,
 #button_taunt {
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 40px;
-	border: solid 3px;
-	background-color:var(--buttonColor);
-	width: 7vmax;
-	height: 7vmax;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  border: solid 3px;
+  background-color: var(--buttonColor);
+  width: 7vmax;
+  height: 7vmax;
 }
 
 #button_shot {
-	background-image: url(./img/SVG/shoot.svg);
+  background-image: url(./img/SVG/shoot.svg);
 }
 #button_auto {
-	background-image: url(./img/SVG/automatic.svg);
+  background-image: url(./img/SVG/automatic.svg);
 }
 #button_sound {
-	background-image: url(./img/SVG/sound.svg);
+  background-image: url(./img/SVG/sound.svg);
 }
 #button_taunt {
-	background-image: url(./img/SVG/taunt.svg);
+  background-image: url(./img/SVG/taunt.svg);
 }
 
 #button_shot:hover,
 #button_auto:hover,
 #button_sound:hover,
 #button_taunt:hover {
-	background-color:var(--buttonColorHover);
-	animation: pulse 2s infinite;
+  background-color: var(--buttonColorHover);
+  animation: pulse 2s infinite;
 }
 /* Frames d'annimation des bouton d'action */
 @keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
-	}
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
-	}
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 /* Bloc contenant l'image principale du bot */
 .bottom_bloc {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .camera {
-	display: none;
-	background-color: rgba(0, 0, 0, 0.265);
-	border: solid;
-	border-radius: 35px;
-	margin-top: 2%;
-	width: 25vmax;
-	height: 16vmax;
-	margin-bottom: 3%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.265);
+  border: solid;
+  border-radius: 35px;
+  margin-top: 2%;
+  width: 25vmax;
+  height: 16vmax;
+  margin-bottom: 3%;
 }
 .bot {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .bot_img {
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 /* Barre de vie/munitions/energie */
 .life_bar,
 .ammo_bar,
 .energy_bar {
-	display: none;
-	align-items: center;
-	justify-content: flex-start;
-	width: 95%;
-	height: 50%;
-	border: solid 5px;
-	border-radius: 20px;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  height: 50%;
+  border: solid 5px;
+  border-radius: 20px;
 }
 .life_bar {
-	background-color: #1f5dcc;
+  background-color: #1f5dcc;
 }
 .ammo_bar {
-	background-color: #ad7214;
+  background-color: #ad7214;
 }
 .energy_bar {
-	background-color: #9c2601;
+  background-color: #9c2601;
 }
 .life_bar_bg,
 .ammo_bar_bg,
 .energy_bar_bg {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	width: 80%;
-	height: 10%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10%;
 }
-#life_bar_cube{
-	display: flex;
-	background: var(--buttonColorHover) repeat-x;
-	width: var(--life);
-	border-radius: 20px;
-	height: 8vmin;
+#life_bar_cube {
+  display: flex;
+  background: var(--buttonColorHover);
+  width: var(--life);
+  border-radius: 20px;
+  height: 8vmin;
 }
-#ammo_bar_cube{
-	display: flex;
-	background: var(--buttonColorHover) repeat-x;
-	width: var(--ammo);
-	border-radius: 20px;
-	height: 8vmin;
+#ammo_bar_cube {
+  display: flex;
+  background: var(--buttonColorHover);
+  width: var(--ammo);
+  border-radius: 20px;
+  height: 8vmin;
 }
 #energy_bar_cube {
-	display: flex;
-	background: var(--buttonColorHover) repeat-x;
-	width: var(--energy);
-	border-radius: 20px;
-	height: 8vmin;
+  display: flex;
+  background: var(--buttonColorHover);
+  width: var(--energy);
+  border-radius: 20px;
+  height: 8vmin;
 }
 @media screen and (max-height: 400px) {
-	body,
-	html {
-		background-color: rgba(0, 0, 0, 0);
-	}
-	.bot {
-		display: flex;
-		flex-direction: row;
-		background-color: rgba(255, 0, 0, 0);
-	}
-	.name_bot {
-		display: none;
-	}
+  body,
+  html {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .life_bar_bg {
+    display: flex;
+    position: absolute;
+    right: 55%;
+    top: 5%;
+    border-radius: 50px;
+    width: 10%;
+    display: flex;
+    background-color: #1f5dcc;
+  }
+  .ammo_bar_bg {
+    position: absolute;
+    right: 45%;
+    top: 5%;
+    border-radius: 50px;
+    width: 10%;
+    display: flex;
+    background-color: #ad7214;
+  }
+  .energy_bar_bg {
+    position: absolute;
+    right: 35%;
+    top: 5%;
+    border-radius: 50px;
+    width: 10%;
+    display: flex;
+    background-color: #9c2601;
+  }
+  .bot {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 0, 0, 0);
+  }
 }
 
 @media screen and (min-height: 640px) {
-	.bot_img {
-		display: none;
-	}
-	.life_bar_bg,
-	.ammo_bar_bg,
-	.energy_bar_bg {
-		height: 100%;
-		margin-top: 5%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.life_bar,
-	.ammo_bar,
-	.energy_bar {
-		display: flex;
-		align-items: center;
-		border-color: white;
-		padding-left: 20px;
-		padding-right: 20px;
-		border-radius: 50px;
-		height: 100%;
-	}
-	.bloc_button {
-		display: flex;
-	}
-	.button_radial_bloc {
-		display: flex;
-	}
-	.bloc_image_bot {
-		display: flex;
-	}
+  .bot_img {
+    display: none;
+  }
+  .life_bar_bg,
+  .ammo_bar_bg,
+  .energy_bar_bg {
+    height: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .life_bar,
+  .ammo_bar,
+  .energy_bar {
+    display: flex;
+    align-items: center;
+    border-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    height: 100%;
+  }
+  .bloc_button {
+    display: flex;
+  }
+  .button_radial_bloc {
+    display: flex;
+  }
+  .bloc_image_bot {
+    display: flex;
+  }
 }
 
-@media screen and (min-height: 1024px){
+@media screen and (min-height: 1024px) {
+  .name_bot {
+    display: flex;
+  }
+  .bottom_bloc {
+    flex-direction: column;
+  }
+  .bloc_image_bot {
+    background-image: url(./img/duck2.png);
+    width: 65%;
+    height: 120%;
+    border: 0;
+  }
+  .button_radial_bloc {
+    padding-bottom: 0;
+  }
+  .bloc_button {
+    position: absolute;
+    top: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 22%;
+  }
+  .bloc_button_left,
+  .bloc_button_right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .button_right_radial,
+  .button_left_radial {
+    border: solid #87590f81 8px;
+    width: 28vmax;
+    height: 28vmax;
+  }
+  .button_shot,
+  .button_auto,
+  .button_sound,
+  .button_taunt {
+    width: 9vmax;
+    height: 9vmax;
+    background-size: 80%;
+  }
+  .button_sound {
+    background-size: 30%;
+  }
+  .button_shot {
+    background-size: 50%;
+  }
+  .button_taunt {
+    background-size: 60%;
+  }
+  .button_auto {
+    background-size: 60%;
+  }
 
-	.name_bot {
-		display: none;
-	}
-	.bottom_bloc {
-		flex-direction: column;
-	}
-	.bloc_image_bot {
-		background-image: url(./img/duck2.png);
-		width: 65%;
-		height: 120%;
-		border: 0 ;
-	}
-	.button_radial_bloc {
-		padding-bottom: 0;
-	}
-	.bloc_button {
-		position: absolute;
-		top: 5%;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		height: 22%;
-	}
-	.bloc_button_left,	
-	.bloc_button_right {
-		width: 100%;
-		justify-content: space-between;
-	}
-	.button_right_radial,
-	.button_left_radial {
-		border: solid #87590f81 8px;
-		width: 28vmax;
-		height: 28vmax;
-	}
-	.button_shot,
-	.button_auto,
-	.button_sound,
-	.button_taunt {
-		width: 9vmax;
-		height: 9vmax;
-		background-size: 80%;
-	}
-	.button_sound {
-		background-size: 30%;
-	}
-	.button_shot {
-		background-size: 50%;
-	}
-	.button_taunt {
-		background-size: 60%;
-	}
-	.button_auto {
-		background-size: 60%;
-	}
-
-	.bot {
-		width: 90%;
-		height: 20%;
-		flex-direction: row;
-		padding-bottom: 5%;
-	}
-	.camera {
-		display: flex;
-		margin-top: 3%;
-	}
-	.ammo_bar_cube,
-	.energy_bar_cube,
-	.life_bar_cube {
-		height: 5vmin;
-	}
+  .bot {
+    width: 90%;
+    height: 20%;
+    flex-direction: row;
+    padding-bottom: 5%;
+  }
+  .camera {
+    display: flex;
+    margin-top: 3%;
+  }
+  .ammo_bar_cube,
+  .energy_bar_cube,
+  .life_bar_cube {
+    height: 5vmin;
+  }
 }
 
-@media screen and (min-width: 1024px){
-	/*wip*/
+@media screen and (min-width: 1024px) {
+  /*wip*/
 }
