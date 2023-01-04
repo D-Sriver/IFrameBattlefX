@@ -13,13 +13,20 @@ function onAgentUpdated(event) {
 function onAgentDirChanged(event) {
   let agent = event.src;
   console.log(`Agent dir changed ${agent.dir}`);
-  //!-------------------------------------------------
-  let img = document.querySelector(".bot_img");
+
+  let img = document.querySelector("img");
   console.log(img);
   img.style.transform = "rotate(" + agent.dir * 90 + "deg)";
 }
 //fonction qui permet de se connecter à l'agent(iframebattlefx)
 function onPageLoaded(event) {
+  let url_string = window.location.href;
+  let url = new URL(url_string);
+  let readonly = url.searchParams.get("readonly")
+  let verbosity = url.searchParams.get("verbosity")
+  console.log(readonly)
+  console.log(verbosity)
+
   let agent = new Agent(
     "sebastien_duez",
     "demo",
