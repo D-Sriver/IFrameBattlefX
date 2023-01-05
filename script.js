@@ -20,14 +20,17 @@ function onAgentUpdated(event) {
   agent.lookTo((agent.dir + 1) % 4);
 
   //*Variable random de life, energy , ammo
-  let value_life = Math.floor(Math.random() * 100);
-  let value_ammo = Math.floor(Math.random() * 100);
-  let value_energy = Math.floor(Math.random() * 100);
+  let [value_life, value_ammo, value_energy] = [
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+  ];
+
   //*modification du DOM :root
   var value_root = document.querySelector(":root");
-  value_root.style.setProperty("--life", (value_life+"%"));
-  value_root.style.setProperty("--ammo", (value_ammo+"%"));
-  value_root.style.setProperty("--energy", (value_energy+"%"));
+  value_root.style.setProperty("--life", value_life + "%");
+  value_root.style.setProperty("--ammo", value_ammo + "%");
+  value_root.style.setProperty("--energy", value_energy + "%");
 }
 //*exemple by ID
 //* function x () {
@@ -76,7 +79,7 @@ function onPageLoaded(event) {
     "sebastien_duez",
     "demo",
     "demo",
-    "iframebattlefx",
+    "demo",
     8080,
     "mqtt.jusdeliens.com",
     verbosity,
