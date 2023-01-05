@@ -9,7 +9,6 @@ function onAgentConnected(event) {
   firebutton.addEventListener("mousedown", onFireButtonDown);
   firebutton.addEventListener("mouseup", onFireButtonUp);
 }
-
 //*lien vers la fonction Agent Connected des deux état du bouton
 function onFireButtonDown(event) {
   console.log("fire !");
@@ -17,6 +16,7 @@ function onFireButtonDown(event) {
 function onFireButtonUp(event) {
   console.log("Stop fire");
 }
+//!-----------------------------------------------------------------//
 //*lien vers la fonction de vie
 function   lifeChanged (event) {
   let life = document.querySelector("#life_bar_cube");
@@ -28,7 +28,6 @@ function onAgentUpdated(event) {
   console.log(`Agent updated ${agent.id}`);
   agent.lookTo((agent.dir + 1) % 4);
 }
-
 //*lien vers la fonction DirChanged
 function onAgentDirChanged(event) {
   console.log(`Agent dir changed ${agent.dir}`);
@@ -36,8 +35,7 @@ function onAgentDirChanged(event) {
   console.log(img);
   img.style.transform = "rotate(" + agent.dir * 90 + "deg)";
 }
-
-//*fonction qui charge l'agent au démarrage de la page
+//!fonction qui charge l'agent au démarrage de la page
 function onPageLoaded(event) {
   let image = document.querySelector(".bloc_image_bot");
   let url_string = window.location.href;
@@ -60,6 +58,7 @@ function onPageLoaded(event) {
   console.log(readonly);
   console.log(verbosity);
 
+//*Crée un nouvel agent iframebattlefx et se connecte 
   agent = new Agent(
     "sebastien_duez",
     "demo",
@@ -72,11 +71,12 @@ function onPageLoaded(event) {
   );
   agent.connect();
 
-  //*Active les agent "Connected","Updated","dirChange"
+  //*"Connected","Updated","dirChange"
   agent.addEventListener("connected", onAgentConnected);
   agent.addEventListener("updated", onAgentUpdated);
   agent.addEventListener("dirChanged", onAgentDirChanged);
   agent.addEventListener("lifeChanged", onAgentlifeChanged)
 }
-//*charge le dom (defer)
+//*charge le contenu du DOM (defer)
 document.addEventListener("DOMContentLoaded", onPageLoaded);
+

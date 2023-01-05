@@ -319,6 +319,13 @@ html {
     width: 28vmax;
     height: 28vmax;
   }
+
+  #life_bar_cube,
+  #ammo_bar_cube,
+  #energy_bar_cube {
+    height: 5vmin;
+  }
+
   .button_shot,
   .button_auto,
   .button_sound,
@@ -357,6 +364,68 @@ html {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  /*wip*/
+@media screen and (min-width: 1270px) {
+  .bloc_image_bot {
+    min-height: 50%;
+    width: 50%;
+  }
+
+  .bloc_button_left,
+  .bloc_button_right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .bloc_button {
+    position: absolute;
+    top: 10%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35%;
+  }
+  #button_shot,
+  #button_auto,
+  #button_sound,
+  #button_taunt {
+    width: 10vmax;
+    height: 10vmax;
+  }
+  .button_radial_bloc {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .camera {
+    display: flex;
+    position: absolute;
+    left: 37%;
+    bottom: 15%;
+  }
+  .bot {
+    flex-direction: row;
+  }
+  .bottom_bloc {
+    width: 80%;
+  }
+  .life_bar_bg,
+  .ammo_bar_bg,
+  .energy_bar_bg {
+    height: 50%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #energy_bar_cube,
+  #ammo_bar_cube,
+  #life_bar_cube {
+    height: 3vmin;
+  }
+
+  .life_bar,
+  .ammo_bar,
+  .energy_bar {
+    width: 75%;
+  }
 }
