@@ -1,6 +1,4 @@
 var agent;
-maxLife = 100;
-maxAmmo = 10;
 
 //*lien vers la fonction Connected
 function onAgentConnected(event) {
@@ -16,18 +14,33 @@ function onFireButtonDown(event) {
 function onFireButtonUp(event) {
   console.log("Stop fire");
 }
-//!-----------------------------------------------------------------//
-//*lien vers la fonction de vie
-function   lifeChanged (event) {
-  let life = document.querySelector("#life_bar_cube");
-  console.log(life);
-  life.style.width = "20%";
-}
-//*lien vers la fonction Updated
+
 function onAgentUpdated(event) {
   console.log(`Agent updated ${agent.id}`);
   agent.lookTo((agent.dir + 1) % 4);
+
+  //*Variable random de life, energy , ammo
+  let value_life = Math.floor(Math.random() * 100);
+  let value_ammo = Math.floor(Math.random() * 100);
+  let value_energy = Math.floor(Math.random() * 100);
+  //*modification du DOM :root
+  var value_root = document.querySelector(":root");
+  value_root.style.setProperty("--life", (value_life+"%"));
+  value_root.style.setProperty("--ammo", (value_ammo+"%"));
+  value_root.style.setProperty("--energy", (value_energy+"%"));
 }
+//*exemple by ID
+//* function x () {
+//*   var x = document.getElementById("#myId");
+//*   x.querySelector(".example").innerHTML = "Hello World!";
+//* }
+//*---------------------
+//*exemple by class
+//* function y () {
+//*   var x = document.getElementByClass(".myClass");
+//*   x.querySelector(".example").innerHTML = "Hello World!";
+//* }
+
 //*lien vers la fonction DirChanged
 function onAgentDirChanged(event) {
   console.log(`Agent dir changed ${agent.dir}`);
@@ -58,7 +71,7 @@ function onPageLoaded(event) {
   console.log(readonly);
   console.log(verbosity);
 
-//*Crée un nouvel agent iframebattlefx et se connecte 
+  //*Crée un nouvel agent iframebattlefx et se connecte
   agent = new Agent(
     "sebastien_duez",
     "demo",
@@ -75,8 +88,7 @@ function onPageLoaded(event) {
   agent.addEventListener("connected", onAgentConnected);
   agent.addEventListener("updated", onAgentUpdated);
   agent.addEventListener("dirChanged", onAgentDirChanged);
-  agent.addEventListener("lifeChanged", onAgentlifeChanged)
+  agent.addEventListener("lifeChanged", onAgentLifeChanged);
 }
 //*charge le contenu du DOM (defer)
 document.addEventListener("DOMContentLoaded", onPageLoaded);
-

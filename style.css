@@ -112,7 +112,7 @@ html {
   background-color: var(--buttonColorHover);
   animation: pulse 2s infinite;
 }
-/* Frames d'annimation des bouton d'action */
+/* Frames d’animation des bouton d'action */
 @keyframes pulse {
   0% {
     transform: scale(0.95);
@@ -157,7 +157,7 @@ html {
   align-items: center;
   height: 100%;
 }
-/* Barre de vie/munitions/energie */
+/* Barre de vie/munitions/énergie */
 .life_bar,
 .ammo_bar,
 .energy_bar {
