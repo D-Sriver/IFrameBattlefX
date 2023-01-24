@@ -19,7 +19,7 @@ function onAgentUpdated(event) {
   console.log(`Agent updated ${agent.id}`);
   agent.lookTo((agent.dir + 1) % 4);
 
-  //*Variable random de life, energy , ammo
+  //*Variable random de life, energy , ammo (je n'ai pas réussi a lier les barres au bot donc j'ai fait quelque chose d'amusant pour ne pas laisser vide)
   let [value_life, value_ammo, value_energy] = [
     Math.floor(Math.random() * 100),
     Math.floor(Math.random() * 100),
