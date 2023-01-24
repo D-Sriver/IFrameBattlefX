@@ -8,7 +8,7 @@ Il est demandé de faire une interface pour mobile, tablette et pc de manière r
 
 ### Prérequis
 
-[![Made with Docker](https://img.shields.io/badge/Python-yellow?logo=python&logoColor=white)](https://python.org "Go to Python homepage") [![Made with Docker](https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=white)](https://www.docker.com/ "Go to Docker homepage")
+[![Made with Python](https://img.shields.io/badge/Python-yellow?logo=python&logoColor=white)](https://python.org "Go to Python homepage") [![Made with Docker](https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=white)](https://www.docker.com/ "Go to Docker homepage") [![Made with Docker](https://img.shields.io/badge/FileZilla-red?logo=filezilla&logoColor=white)](https://filezilla-project.org/ "Go to Filezilla homepage")
 ## En tant qu'utilisateur
 
 - Une couleur qui se démarque
@@ -18,11 +18,8 @@ Il est demandé de faire une interface pour mobile, tablette et pc de manière r
 - Une mélodie simple pour chaque action
 
   - Mort
-
   - Victoire
-
   - Tir
-
   - Taunt
 
 - Une interface de déplacement manuelle
@@ -40,7 +37,7 @@ Il est demandé de faire une interface pour mobile, tablette et pc de manière r
 
 - permettre l’affichage simplifié de tous les utilisateurs
 
-- Vie affichée par des pastille de couleur =>
+- Vie affichée par des pastille de couleur 
 
   - 3 état 
     - Vert > bon
@@ -71,7 +68,7 @@ Utilisateur
 
 - Être capable de lancer un petit son.
 
-  --Admin--
+Admin
 
 - Afficher les données de vie , d’énergie et de batterie.
 
@@ -81,7 +78,21 @@ Utilisateur
 
 ## Démarrage
 
-Vous rendre sur le site http:// ...
+Créer un docker "ubuntu" avec une redirection de port sur :2530 
+
+```
+docker pull ubuntu
+docker run --name testdocker -p 0000:2500 -p 0000:2530 -dit ubuntu
+apt update
+apt upgrade
+apt install apache2
+apt install flask
+apt install OpenSSH
+```
+Une fois fait vous devriez être en mesure de vous connecter depuis fileZilla a votre docker.
+
+il vous suffira de placer le contenu du fichier "docker" a l’intérieur de votre docker pour lancer les script depuis une page localhost
+
 
 ## Fabriqué avec
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Visual-studio' src='https://img.shields.io/badge/VS code-100000?style=flat&logo=Visual-studio&logoColor=0099FF&labelColor=FFFFFF&color=007BFF'/></a> <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='flask' src='https://img.shields.io/badge/Flask-100000?style=flat&logo=flask&logoColor=010100&labelColor=FFFFFF&color=E1E1E0'/></a> <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='docker' src='https://img.shields.io/badge/Docker-100000?style=flat&logo=docker&logoColor=0099FF&labelColor=FFFFFF&color=007BFF'/></a>
@@ -176,7 +187,7 @@ It is requested to make an interface for mobile, tablet and pc in a responsive w
 
 ## Start
 
-Go to http:// ...
+Go to https://jusdeliens.com/play/pytactx-viewer/
 
 ## Manufactured with
 
