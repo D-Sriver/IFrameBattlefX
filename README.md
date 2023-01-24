@@ -93,10 +93,8 @@ apt install flask
 apt install OpenSSH
 
 ```
-Une fois fait vous devriez être en mesure de vous connecter depuis fileZilla a votre docker.
-
-il vous suffira de placer le contenu du fichier "docker" a l’intérieur de votre docker pour lancer les script depuis la page localhost:votre_port
-
+Une fois fait vous devriez être en mesure de vous connecter a votre docker.
+Lancez index.py depuis l’intérieur de votre docker avec la commande "python3 index.py" pour lancer le script permettant a l'iframe de se connecter au module
 
 ## Fabriqué avec
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Visual-studio' src='https://img.shields.io/badge/VS code-100000?style=flat&logo=Visual-studio&logoColor=0099FF&labelColor=FFFFFF&color=007BFF'/></a> <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='flask' src='https://img.shields.io/badge/Flask-100000?style=flat&logo=flask&logoColor=010100&labelColor=FFFFFF&color=E1E1E0'/></a> <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='docker' src='https://img.shields.io/badge/Docker-100000?style=flat&logo=docker&logoColor=0099FF&labelColor=FFFFFF&color=007BFF'/></a>
