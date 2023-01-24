@@ -78,20 +78,24 @@ Admin
 
 ## Démarrage
 
-Créer un docker "ubuntu" avec une redirection de port sur :2530 
+Créer un docker "ubuntu" avec une redirection de port
 
 ```
-docker pull ubuntu
-docker run --name testdocker -p 0000:2500 -p 0000:2530 -dit ubuntu
+docker pull ubuntu (télécharge l'image "ubuntu")
+docker run --name testdocker -p 0000:votre_port(20) -p 0000:votre_port(80) -dit ubuntu
+
+docker attach "le nom de votre docker"
+
 apt update
 apt upgrade
 apt install apache2
 apt install flask
 apt install OpenSSH
+
 ```
 Une fois fait vous devriez être en mesure de vous connecter depuis fileZilla a votre docker.
 
-il vous suffira de placer le contenu du fichier "docker" a l’intérieur de votre docker pour lancer les script depuis une page localhost
+il vous suffira de placer le contenu du fichier "docker" a l’intérieur de votre docker pour lancer les script depuis la page localhost:votre_port
 
 
 ## Fabriqué avec
@@ -123,7 +127,7 @@ It is requested to make an interface for mobile, tablet and pc in a responsive w
 
 ### Prerequisites
 
-[![Made with Docker](https://img.shields.io/badge/Python-yellow?logo=python&logoColor=white)](https://python.org "Go to Python homepage") [![Made with Docker](https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=white)](https://www.docker.com/ "Go to Docker homepage")
+[![Made with Docker](https://img.shields.io/badge/Python-yellow?logo=python&logoColor=white)](https://python.org "Go to Python homepage") [![Made with Docker](https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=white)](https://www.docker.com/ "Go to Docker homepage") [![Made with Docker](https://img.shields.io/badge/FileZilla-red?logo=filezilla&logoColor=white)](https://filezilla-project.org/ "Go to Filezilla homepage")
 ## As a user
 
 - A color that stands out
@@ -187,7 +191,24 @@ It is requested to make an interface for mobile, tablet and pc in a responsive w
 
 ## Start
 
-Go to https://jusdeliens.com/play/pytactx-viewer/
+Create a "ubuntu" docker with a port redirection
+
+```
+docker pull ubuntu (download image "ubuntu")
+docker run --name testdocker -p 0000:your_port(20) -p 0000:your_port(80) -dit ubuntu
+
+docker attach "the name of your docker"
+
+apt update
+apt upgrade
+apt install apache2
+apt install flask
+apt install OpenSSH
+
+```
+Once done you should be able to connect from fileZilla to your docker.
+
+Simply place the contents of the "docker" file inside your docker to launch the scripts from the localhost:your_port page
 
 ## Manufactured with
 
