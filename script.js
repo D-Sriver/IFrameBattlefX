@@ -19,18 +19,16 @@ function onAgentUpdated(event) {
   console.log(`Agent updated ${agent.id}`);
   agent.lookTo((agent.dir + 1) % 4);
 
-  //*Variable random de life, energy , ammo (je n'ai pas réussi a lier les barres au bot donc j'ai fait quelque chose d'amusant pour ne pas laisser vide)
-  let [value_life, value_ammo, value_energy] = [
-    Math.floor(Math.random() * 100),
-    Math.floor(Math.random() * 100),
-    Math.floor(Math.random() * 100),
+  //*Variable random de life, energy , ammo 
+  let [value_life, value_ammo] = [
+    console.log(`Agent Life Change ${agent.life}`),
+    console.log(`Agent Ammo Change ${agent.ammo}`),
   ];
 
   //*modification du DOM :root
   var value_root = document.querySelector(":root");
   value_root.style.setProperty("--life", value_life + "%");
   value_root.style.setProperty("--ammo", value_ammo + "%");
-  value_root.style.setProperty("--energy", value_energy + "%");
 }
 //*exemple by ID
 //* function x () {
@@ -62,13 +60,13 @@ function onPageLoaded(event) {
   //*readonly défini automatiquement sur True
   if (readonly == null) readonly = true;
   else readonly = readonly == "true";
-  //! expression d'operations ternaire
+  //* expression d'operations ternaire
   //!  readonly = (readonly==null) ?   true : (readonly === 'true');
 
   //*permet de définir les informations (1 a 4 (debug))
   if (verbosity == null) verbosity = 1;
   else verbosity = parseInt(verbosity);
-  //! expression d'operations ternaire
+  //* expression d'operations ternaire
   //!  readonly = (verbosity==null) ?   1 :   parseInt(verbosity);
 
   console.log(readonly);
