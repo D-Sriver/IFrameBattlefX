@@ -19,10 +19,13 @@ function onAgentUpdated(event) {
   console.log(`Agent updated ${agent.id}`);
   agent.lookTo((agent.dir + 1) % 4);
 
-  //*Variable random de life, energy , ammo 
+  //*Variable random de life, energy , ammo
+  
+  console.log(`Agent Life Change ${agent.life}`);
+
   let [value_life, value_ammo] = [
-    console.log(`Agent Life Change ${agent.life}`),
-    console.log(`Agent Ammo Change ${agent.ammo}`),
+    `${agent.life}`,
+    `${agent.ammo}`*10, 
   ];
 
   //*modification du DOM :root
