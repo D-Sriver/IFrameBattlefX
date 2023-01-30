@@ -1,6 +1,6 @@
 # IframeBattleFX Readme
 
-Programmer une IA Iframe en HTML/CSS/JS de combat dans un combat à mort dans une arène virtuelle.
+Programmer un bot Iframe en HTML/CSS/JS de combat dans un combat à mort dans une arène virtuelle.
 
 ## Pour commencer
 

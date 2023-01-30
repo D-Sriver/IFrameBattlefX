@@ -6,9 +6,10 @@
   --ammo: 100%;
   --energy: 100%;
 }
-
+/* * importation de la font */
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
 * {
+  /* * transition absolue*/
   transition: 0.5s;
 }
 body,
@@ -208,6 +209,7 @@ html {
   border-radius: 20px;
   height: 8vmin;
 }
+/* * media Queries iframe*/
 @media screen and (max-height: 400px) {
   body,
   html {
@@ -248,7 +250,7 @@ html {
     background-color: rgba(255, 0, 0, 0);
   }
 }
-
+/* * media Queries mobile*/
 @media screen and (min-height: 640px) {
   .bot_img {
     display: none;
@@ -283,7 +285,7 @@ html {
     display: flex;
   }
 }
-
+/* * media Queries Tablet*/
 @media screen and (min-height: 1024px) {
   .name_bot {
     display: flex;
@@ -363,7 +365,7 @@ html {
     height: 5vmin;
   }
 }
-
+/* * media Queries PC*/
 @media screen and (min-width: 1270px) {
   .bloc_image_bot {
     min-height: 50%;
