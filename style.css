@@ -368,8 +368,7 @@ html {
 /* * media Queries PC*/
 @media screen and (min-width: 1270px) {
   .bloc_image_bot {
-    min-height: 50%;
-    width: 50%;
+    width: 19vmin;
   }
 
   .bloc_button_left,
@@ -380,11 +379,11 @@ html {
 
   .bloc_button {
     position: absolute;
-    top: 10%;
+    top: 3%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 35%;
+    height: 40%;
   }
   #button_shot,
   #button_auto,
@@ -396,7 +395,7 @@ html {
   .button_radial_bloc {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
   }
   .camera {
     display: flex;
@@ -413,7 +412,7 @@ html {
   .life_bar_bg,
   .ammo_bar_bg,
   .energy_bar_bg {
-    height: 50%;
+    height: 40%;
     margin-top: 1%;
     display: flex;
     justify-content: center;
@@ -422,7 +421,7 @@ html {
   #energy_bar_cube,
   #ammo_bar_cube,
   #life_bar_cube {
-    height: 3vmin;
+    height: 5vmin;
   }
 
   .life_bar,
