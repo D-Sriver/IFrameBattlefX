@@ -4,7 +4,6 @@
   --buttonColorHover: #ffffff;
   --life: 100%;
   --ammo: 100%;
-  --energy: 100%;
 }
 /* * importation de la font */
 @import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
@@ -160,8 +159,7 @@ html {
 }
 /* Barre de vie/munitions/énergie */
 .life_bar,
-.ammo_bar,
-.energy_bar {
+.ammo_bar{
   display: none;
   align-items: center;
   justify-content: flex-start;
@@ -176,12 +174,8 @@ html {
 .ammo_bar {
   background-color: #ad7214;
 }
-.energy_bar {
-  background-color: #9c2601;
-}
 .life_bar_bg,
-.ammo_bar_bg,
-.energy_bar_bg {
+.ammo_bar_bg{
   display: none;
   justify-content: center;
   align-items: center;
@@ -202,13 +196,7 @@ html {
   border-radius: 20px;
   height: 8vmin;
 }
-#energy_bar_cube {
-  display: flex;
-  background: var(--buttonColorHover);
-  width: var(--energy);
-  border-radius: 20px;
-  height: 8vmin;
-}
+
 /* * media Queries iframe*/
 @media screen and (max-height: 400px) {
   body,
@@ -235,15 +223,6 @@ html {
     display: flex;
     background-color: #ad7214;
   }
-  .energy_bar_bg {
-    position: absolute;
-    right: 35%;
-    top: 5%;
-    border-radius: 50px;
-    width: 10%;
-    display: flex;
-    background-color: #9c2601;
-  }
   .bot {
     display: flex;
     flex-direction: row;
@@ -256,8 +235,7 @@ html {
     display: none;
   }
   .life_bar_bg,
-  .ammo_bar_bg,
-  .energy_bar_bg {
+  .ammo_bar_bg {
     height: 100%;
     margin-top: 5%;
     display: flex;
@@ -265,8 +243,7 @@ html {
     align-items: center;
   }
   .life_bar,
-  .ammo_bar,
-  .energy_bar {
+  .ammo_bar {
     display: flex;
     align-items: center;
     border-color: white;
@@ -323,8 +300,7 @@ html {
   }
 
   #life_bar_cube,
-  #ammo_bar_cube,
-  #energy_bar_cube {
+  #ammo_bar_cube,{
     height: 5vmin;
   }
 
@@ -360,7 +336,6 @@ html {
     margin-top: 3%;
   }
   .ammo_bar_cube,
-  .energy_bar_cube,
   .life_bar_cube {
     height: 5vmin;
   }
@@ -410,15 +385,13 @@ html {
     width: 80%;
   }
   .life_bar_bg,
-  .ammo_bar_bg,
-  .energy_bar_bg {
+  .ammo_bar_bg {
     height: 40%;
     margin-top: 1%;
     display: flex;
     justify-content: center;
   }
 
-  #energy_bar_cube,
   #ammo_bar_cube,
   #life_bar_cube {
     height: 5vmin;
