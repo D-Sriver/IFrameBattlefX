@@ -91,6 +91,7 @@ apt upgrade
 apt install apache2
 apt install flask
 apt install OpenSSH
+passwd (changer le mot de passe)
 
 ```
 Une fois fait vous devriez être en mesure de vous connecter a votre docker.
@@ -202,6 +203,7 @@ apt upgrade
 apt install apache2
 apt install flask
 apt install OpenSSH
+passwd (change password)
 
 ```
 Once done you should be able to connect from fileZilla to your docker.
