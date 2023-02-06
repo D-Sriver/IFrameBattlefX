@@ -76,16 +76,7 @@ function onPageLoaded(event) {
   console.log(verbosity);
 
   //*Crée un nouvel agent iframebattlefx et se connecte
-  agent = new Agent(
-    "sebastien_duez",
-    "demo",
-    "demo",
-    "demo",
-    8080,
-    "mqtt.jusdeliens.com",
-    verbosity,
-    readonly
-  );
+  agent = new Agent();
   agent.connect();
 
   //*"Connected","Updated","dirChange"
